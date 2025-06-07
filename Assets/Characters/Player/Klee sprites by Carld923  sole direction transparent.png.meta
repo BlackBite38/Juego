@@ -1,0 +1,1887 @@
+fileFormatVersion: 2
+guid: 9bb28e60ee4c4a849bdfac9d5ac0c62d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 359
+        width: 23
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7382e31a4424cb9419f8cb1b1fa20309
+      internalID: 548736091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 359
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a55b56a855ca64789f017a446eb5b4
+      internalID: 575235169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 359
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d517989882f02b34282f866518b37710
+      internalID: -499934126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 359
+        width: 23
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd298df783920a42818c1fe535e7789
+      internalID: 1037495924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_4
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 359
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117026ce755dcf54a9150a4eeffee2e3
+      internalID: 2003952838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_5
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 359
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5abef4e7f5f3a14cbe691c7a7bd0135
+      internalID: 1329300663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 326
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b743ddd111d124fbdf3e65496f0423
+      internalID: -2020175207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 326
+        width: 23
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8e250a4c94b1f4b8bd47ff528e1cf9
+      internalID: -308344681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_8
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 326
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ecabd4e582b084aa6d0c93f0f9b682
+      internalID: 777362182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_9
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 326
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4720875c8bc4be54aaf3f11fa7732fe9
+      internalID: -1999934924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_10
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 326
+        width: 22
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5f5906ac4394547b7ed33be935f129
+      internalID: 2068680429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_11
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 326
+        width: 22
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93dd37188706a0408879c5c5b156ec5
+      internalID: -2071528474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_12
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 326
+        width: 22
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb2e3dd09d518441b27c3e2bc823222
+      internalID: 926772382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_13
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 326
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a8f63f46f427448a7ac76fbeb57926
+      internalID: 1029974620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 293
+        width: 24
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2900f3817302414991d63a7d0b3e5b3
+      internalID: 1462163776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 293
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0980bd63ee7e4c64cae6f8709ed49356
+      internalID: 613243499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_16
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 293
+        width: 24
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556c1ec22238f1946a5e59b10f26d1c9
+      internalID: 248408269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_17
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 293
+        width: 22
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ee23e23dc24e44e819d26e5f413731
+      internalID: -1489817869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_18
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 261
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76034046e68fa994a8674320389021ef
+      internalID: 1381667612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 261
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348b41b7833859b4daf241f1d1335a37
+      internalID: -290146693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_20
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 261
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a081f85a1aa04c147abae83e3a0c02c3
+      internalID: -1630912573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_21
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 261
+        width: 23
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d955035ff92acf14b9a2f584a956c65e
+      internalID: -235286613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_22
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 261
+        width: 22
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fad9e5d6b8a8b478950fa3937611fb
+      internalID: -566239899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_23
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 261
+        width: 23
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f590f7a2d9f980458ca74fd5ba5f1ae
+      internalID: -1643375935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_24
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 261
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0071de04a6d539b44bfa617b5310b646
+      internalID: 423491051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_25
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 261
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5904550cbbaad34bae111390e2646a1
+      internalID: -2037632327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_26
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 229
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157a3c85de561934e90cc52f23901d66
+      internalID: -589333404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_27
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 229
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc02c73c9e16fe45ba5d00f0e763f78
+      internalID: -945299929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_28
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 229
+        width: 23
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d3d58c28f240d42974c595fd290519
+      internalID: 1106720136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_29
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 229
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd9239de31984f4fbe35a5921885501
+      internalID: 2052671933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_30
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 229
+        width: 23
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c69e4321ca6a0439f32f85ce743943
+      internalID: 1009442709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_31
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 229
+        width: 23
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5575e477e5869b64a889d69198eb465c
+      internalID: -261507396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_32
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 229
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c801138c6a934f543acf003aa52e145f
+      internalID: 170754631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_33
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 229
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5c6891752bde54eacedfd46c89eb78
+      internalID: 1758780551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_34
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 197
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9309954ff599646b41f475929e915b
+      internalID: -1113261340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_35
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 197
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c491ba2c58540a34f88a69c311ec19dc
+      internalID: 1208871187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_36
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 197
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ac9543b975fe549b30b340d25a6f2b
+      internalID: 1549145745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_37
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 197
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949e2c2f7d74b7242adb89b547c489e1
+      internalID: 1563058316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_38
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 197
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ff361564b18ca4e8bd21e898bd4b2a
+      internalID: -1037683527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_39
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 197
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ed949ab47f8f841bbff768ad3ec6a5
+      internalID: 1783637247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_40
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 197
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c493fbb044fe6458cbe3f824db5f87
+      internalID: 959618571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_41
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 197
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafcc81eae037b14da15268fbc445e07
+      internalID: 836121354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_42
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 165
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12c1836aedfc2941befadae4a78170d
+      internalID: -1381045171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_43
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 165
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19548a7d95fc3c84c8bcfaecd3973175
+      internalID: 1661457125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_44
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 165
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe2865141362b241b4a3a7f9dfc38e6
+      internalID: 603594220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_45
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 165
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64adbf833f342a548ba31757aae7c42c
+      internalID: -398718777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_46
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 165
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319bad9b36a54ae4fa0add448dc69477
+      internalID: 1635989751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_47
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 165
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eaf6277347eb94ab79ed03fbff2da7
+      internalID: -716182050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_48
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 165
+        width: 25
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9642c1cb8dc59944793f857c072397ce
+      internalID: -122317354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_49
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 165
+        width: 25
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc46e897725d0545a493372ab16a61b
+      internalID: 183703541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_50
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 134
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c90daa04490a142ac8a43df36163cc
+      internalID: -987275568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_51
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 133
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d567bed6935fbb840a916b8fb2f7d370
+      internalID: 1144133899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_52
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 133
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb06a9c844d365b43adf330ae8092802
+      internalID: 841834507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_53
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 133
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1195c5ac86fd14b8e1e8171f7155fd
+      internalID: 1033234409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_54
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 134
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfd94cc0f1a34c459075aa9acd5bbda
+      internalID: -700033829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_55
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 133
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d5dafefdc1d9b4b8f71e06a4a9a2e6
+      internalID: 132398709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_56
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 133
+        width: 25
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ecf55627e6e2942bd3c18c71e2350b
+      internalID: 2058830891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_57
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 133
+        width: 25
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cb140852172614bb8a2aabae58ff47
+      internalID: -3318851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_58
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 101
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c6ee794689c9c46ab18621eb9bb56e
+      internalID: 554585452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_59
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 101
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa5fd838a89460408f61c870b96725f
+      internalID: 1784853418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_60
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 69
+        width: 25
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541f344b9c33fe44aa39caab85c3e901
+      internalID: 1435216834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_61
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 70
+        width: 25
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9a9767d2c55964fa69e53c84240b78
+      internalID: 614471593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_62
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 69
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d69d1e23e58971468c719eac95a69ed
+      internalID: 1895829446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_63
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 69
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc42f915f03a6c449f37090141def29
+      internalID: -333843307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_64
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 69
+        width: 25
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebb860ca3c830e41829b34814bf0dbf
+      internalID: -1830617635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_65
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 70
+        width: 25
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434d69ac214152d46a7016f64e92fdc0
+      internalID: 1564527964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_66
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 69
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcbc6749591082408d9528f8ac7dac2
+      internalID: 598290348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_67
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 69
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f51094c83d5334cb9174a361263b89
+      internalID: 1611909796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_68
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 37
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1edddb48ff96d149ae4e0d2508a5fd4
+      internalID: -1961337333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_69
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 37
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0588a83fca4ee4e889cff247fdedcc
+      internalID: 1759103232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_70
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 37
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842f68b31f6eb0142b7514efce64a911
+      internalID: 795171623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_71
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 37
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc9d0ad4bfa493428f88287009d3b16
+      internalID: -1728421946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_72
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b12a89b06cb254b96110439a1e20f8
+      internalID: 550553750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_73
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 5
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe20916c6da26a4786acec84f226394
+      internalID: -221523469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_74
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 5
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9a378fa7de2ef4ca8925364205af20
+      internalID: -1750589717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_75
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 5
+        width: 23
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c46571d2a73a3a44921dc86576cdcf6
+      internalID: 1099545800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_76
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 5
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc117b8da08d79841af50bd87b4cec32
+      internalID: -686136297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_77
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 6
+        width: 27
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b3b34e5c5c757488a7d3ee40981a32
+      internalID: 701814622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_78
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 6
+        width: 31
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21596252c01f494c8c37ae4e0487921
+      internalID: 415191660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Klee sprites by Carld923  sole direction transparent_79
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 4
+        width: 31
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd937ecd67d3e1c40ac98c2ea0ca68d1
+      internalID: 219861888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Klee sprites by Carld923  sole direction transparent_0: 548736091
+      Klee sprites by Carld923  sole direction transparent_1: 575235169
+      Klee sprites by Carld923  sole direction transparent_10: 2068680429
+      Klee sprites by Carld923  sole direction transparent_11: -2071528474
+      Klee sprites by Carld923  sole direction transparent_12: 926772382
+      Klee sprites by Carld923  sole direction transparent_13: 1029974620
+      Klee sprites by Carld923  sole direction transparent_14: 1462163776
+      Klee sprites by Carld923  sole direction transparent_15: 613243499
+      Klee sprites by Carld923  sole direction transparent_16: 248408269
+      Klee sprites by Carld923  sole direction transparent_17: -1489817869
+      Klee sprites by Carld923  sole direction transparent_18: 1381667612
+      Klee sprites by Carld923  sole direction transparent_19: -290146693
+      Klee sprites by Carld923  sole direction transparent_2: -499934126
+      Klee sprites by Carld923  sole direction transparent_20: -1630912573
+      Klee sprites by Carld923  sole direction transparent_21: -235286613
+      Klee sprites by Carld923  sole direction transparent_22: -566239899
+      Klee sprites by Carld923  sole direction transparent_23: -1643375935
+      Klee sprites by Carld923  sole direction transparent_24: 423491051
+      Klee sprites by Carld923  sole direction transparent_25: -2037632327
+      Klee sprites by Carld923  sole direction transparent_26: -589333404
+      Klee sprites by Carld923  sole direction transparent_27: -945299929
+      Klee sprites by Carld923  sole direction transparent_28: 1106720136
+      Klee sprites by Carld923  sole direction transparent_29: 2052671933
+      Klee sprites by Carld923  sole direction transparent_3: 1037495924
+      Klee sprites by Carld923  sole direction transparent_30: 1009442709
+      Klee sprites by Carld923  sole direction transparent_31: -261507396
+      Klee sprites by Carld923  sole direction transparent_32: 170754631
+      Klee sprites by Carld923  sole direction transparent_33: 1758780551
+      Klee sprites by Carld923  sole direction transparent_34: -1113261340
+      Klee sprites by Carld923  sole direction transparent_35: 1208871187
+      Klee sprites by Carld923  sole direction transparent_36: 1549145745
+      Klee sprites by Carld923  sole direction transparent_37: 1563058316
+      Klee sprites by Carld923  sole direction transparent_38: -1037683527
+      Klee sprites by Carld923  sole direction transparent_39: 1783637247
+      Klee sprites by Carld923  sole direction transparent_4: 2003952838
+      Klee sprites by Carld923  sole direction transparent_40: 959618571
+      Klee sprites by Carld923  sole direction transparent_41: 836121354
+      Klee sprites by Carld923  sole direction transparent_42: -1381045171
+      Klee sprites by Carld923  sole direction transparent_43: 1661457125
+      Klee sprites by Carld923  sole direction transparent_44: 603594220
+      Klee sprites by Carld923  sole direction transparent_45: -398718777
+      Klee sprites by Carld923  sole direction transparent_46: 1635989751
+      Klee sprites by Carld923  sole direction transparent_47: -716182050
+      Klee sprites by Carld923  sole direction transparent_48: -122317354
+      Klee sprites by Carld923  sole direction transparent_49: 183703541
+      Klee sprites by Carld923  sole direction transparent_5: 1329300663
+      Klee sprites by Carld923  sole direction transparent_50: -987275568
+      Klee sprites by Carld923  sole direction transparent_51: 1144133899
+      Klee sprites by Carld923  sole direction transparent_52: 841834507
+      Klee sprites by Carld923  sole direction transparent_53: 1033234409
+      Klee sprites by Carld923  sole direction transparent_54: -700033829
+      Klee sprites by Carld923  sole direction transparent_55: 132398709
+      Klee sprites by Carld923  sole direction transparent_56: 2058830891
+      Klee sprites by Carld923  sole direction transparent_57: -3318851
+      Klee sprites by Carld923  sole direction transparent_58: 554585452
+      Klee sprites by Carld923  sole direction transparent_59: 1784853418
+      Klee sprites by Carld923  sole direction transparent_6: -2020175207
+      Klee sprites by Carld923  sole direction transparent_60: 1435216834
+      Klee sprites by Carld923  sole direction transparent_61: 614471593
+      Klee sprites by Carld923  sole direction transparent_62: 1895829446
+      Klee sprites by Carld923  sole direction transparent_63: -333843307
+      Klee sprites by Carld923  sole direction transparent_64: -1830617635
+      Klee sprites by Carld923  sole direction transparent_65: 1564527964
+      Klee sprites by Carld923  sole direction transparent_66: 598290348
+      Klee sprites by Carld923  sole direction transparent_67: 1611909796
+      Klee sprites by Carld923  sole direction transparent_68: -1961337333
+      Klee sprites by Carld923  sole direction transparent_69: 1759103232
+      Klee sprites by Carld923  sole direction transparent_7: -308344681
+      Klee sprites by Carld923  sole direction transparent_70: 795171623
+      Klee sprites by Carld923  sole direction transparent_71: -1728421946
+      Klee sprites by Carld923  sole direction transparent_72: 550553750
+      Klee sprites by Carld923  sole direction transparent_73: -221523469
+      Klee sprites by Carld923  sole direction transparent_74: -1750589717
+      Klee sprites by Carld923  sole direction transparent_75: 1099545800
+      Klee sprites by Carld923  sole direction transparent_76: -686136297
+      Klee sprites by Carld923  sole direction transparent_77: 701814622
+      Klee sprites by Carld923  sole direction transparent_78: 415191660
+      Klee sprites by Carld923  sole direction transparent_79: 219861888
+      Klee sprites by Carld923  sole direction transparent_8: 777362182
+      Klee sprites by Carld923  sole direction transparent_9: -1999934924
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
