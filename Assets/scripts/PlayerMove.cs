@@ -14,16 +14,25 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] LayerMask groundLayer, wallLayer;
     private float wallJumpCooldown;
     private float HorizontalInput;
-    [SerializeField] private float AttackCooldown;
-    [SerializeField] int a;   //    weapon[];
-    [SerializeField] GameObject Bomb, Firework, BombCharged, FireworkCharged;
-    public Transform Offset;
+    [SerializeField] public float AttackCooldown;
+    [SerializeField] public int weaponType;   //    weapon[];
+    [SerializeField] GameObject BombT, BombP, BombTCharged, BombPCharged; // Firework, FireworkCharged;
+    [SerializeField] public Transform BombOffset1, BombOffset2, BombOffset3, FireworkOffset;
+            //[SerializeField] private GameObject[] FireworksAmmo, ChargedFireworksAmmo;
+    // bool chargeUnlocked;
+    // float chargeAmount;
+    public float direction;
+
+    public float canShoot;
     int HP;
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        direction = 1;
     }
 
     void Start()
@@ -40,15 +49,17 @@ public class PlayerMove : MonoBehaviour
         {
             anim.SetBool("FacingLeft", false);
             transform.localScale = Vector3.one;
+            direction = 1;
         }
         else if (HorizontalInput < -0.1)
         {
             anim.SetBool("FacingLeft", true);
             transform.localScale = new Vector3(-1, 1, 1);
+            direction=-1;
         }
         anim.SetBool("Run", HorizontalInput != 0);
         anim.SetBool("OnGround", isGrounded()); //Grounded);
-        
+        //agacharse
         if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded()) //Grounded)
         {
             anim.SetBool("Crouch", true);
@@ -61,6 +72,7 @@ public class PlayerMove : MonoBehaviour
             Crouching = false;
             speed = 7;
         }
+        //salto en paredes
         if (wallJumpCooldown > 0.2f)
         {
             rb.velocity = new Vector2(HorizontalInput * speed, rb.velocity.y);
@@ -84,6 +96,7 @@ public class PlayerMove : MonoBehaviour
         {
             wallJumpCooldown += Time.deltaTime;
         }
+        //armas
         if(AttackCooldown>0)
         {
             AttackCooldown -= Time.deltaTime*2;
@@ -94,16 +107,39 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            a+=1;
+            weaponType+=1;
         }
-        if(a>1)
+        if(weaponType>1)
         {
-            a = 0;
+            weaponType = 0;
         }
         if (Input.GetKeyDown(KeyCode.Z) && AttackCooldown==0)
         {
-            Attack();
-            AttackCooldown += 1;
+            if(weaponType == 0)
+            {
+                //if(chargeUnlocked==true)
+                //else
+                BombThrow();
+            }
+            else if(weaponType == 1)
+            {
+                return;
+                //if(chargeUnlocked==true)     ChargedFireworkThrow();
+                //else
+                //FireworkThrow();
+            }
+        }
+        if (onWall() && !isGrounded())
+        {
+            canShoot = 1;
+        }
+        else if(Crouching==true)
+        {
+            canShoot = 1;
+        }
+        else
+        {
+            canShoot=0;
         }
     }
     void Jump()
@@ -126,32 +162,33 @@ public class PlayerMove : MonoBehaviour
                 transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             wallJumpCooldown = 0;
-            
         }
     }
-    void Attack()
+    void BombThrow()
     {
-        if(a==0)
+        if (!Crouching && !onWall())
         {
-            if(!Crouching)
-            {
-                anim.SetTrigger("BombThr");
-                Instantiate(Bomb, Offset.position, transform.rotation);
-            }
-            else
-            {
-                Instantiate(Bomb, Offset.position, transform.rotation);
-            }
+            anim.SetTrigger("BombThr");
+            Instantiate(BombT, BombOffset1.position, transform.rotation);
+            AttackCooldown += 1;
         }
-        else if(a==1 && !Crouching)
+        else if (onWall() && !isGrounded())
         {
-            anim.SetTrigger("FireThr");
-            Instantiate(Firework, Offset.position, transform.rotation);
+            Instantiate(BombP, BombOffset2.position, transform.rotation);
+            AttackCooldown += 1;
         }
-        
+        else
+        {
+            Instantiate(BombP, BombOffset3.position, transform.rotation);
+            AttackCooldown += 1;
+        }
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            // se activa al chocar con el enemigo
+        }
         //anterior metodo de salto
         //if (collision.gameObject.tag == "Ground")
         //{
@@ -168,4 +205,34 @@ public class PlayerMove : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x,0), 0.1f, wallLayer);
         return raycastHit.collider != null;
     }
+    //public void FireworkThrow()
+    //{
+    //    if (!Crouching)
+    //    {
+    //        if (onWall() && !isGrounded())
+    //        {
+    //            return;
+    //        }
+    //        else
+    //        {
+    //            anim.SetTrigger("FireThr");
+    //            FireworksAmmo[FindFirework()].transform.position = Offset1.position;
+    //            FireworksAmmo[FindFirework()].GetComponent<projectileTest>().SetDirection(Mathf.Sign(transform.localScale.x));
+    //            AttackCooldown += 1;
+    //            
+    //            //Instantiate(Firework, Offset1.position, transform.rotation);
+    //        }
+    //    }
+    //}
+    //private int FindFirework()
+    //{
+    //    for(int i =0; i<FireworksAmmo.Length; i++)
+    //    {
+    //        if (!FireworksAmmo[i].activeInHierarchy)
+    //        {
+    //            return i;
+    //        }
+    //    }
+    //    return 0;
+    //}
 }

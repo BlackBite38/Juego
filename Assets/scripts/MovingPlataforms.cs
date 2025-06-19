@@ -8,6 +8,7 @@ public class MovingPlataforms : MonoBehaviour
     public int startPoint;
     public Transform[] points;
     private int i;
+    public Transform OG_P;
 
     void Start()
     {
@@ -36,6 +37,6 @@ public class MovingPlataforms : MonoBehaviour
     }
     void OnCollisionExit2D(Collision2D other)
     {
-        other.transform.SetParent(null);
+        other.transform.SetParent(OG_P);
     }
 }

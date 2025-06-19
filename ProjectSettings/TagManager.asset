@@ -9,6 +9,10 @@ TagManager:
   - EnemyProyectile
   - Bomb
   - Firework
+  - Enemy
+  - stopper
+  - Hole
+  - reseter
   layers:
   - Default
   - TransparentFX
@@ -21,9 +25,9 @@ TagManager:
   - Enemy Floor
   - Wall
   - Projectile
-  - 
-  - 
-  - 
+  - Camera
+  - CameraLimit
+  - Triggerer
   - 
   - 
   - 
