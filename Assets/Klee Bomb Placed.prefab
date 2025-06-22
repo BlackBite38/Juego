@@ -108,6 +108,7 @@ MonoBehaviour:
   Direction: 0
   power: 0
   timer3: 0
+  damage: 2
 --- !u!95 &3882475400130045800
 Animator:
   serializedVersion: 5

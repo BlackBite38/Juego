@@ -104,6 +104,7 @@ MonoBehaviour:
   speed: 12
   direction: 0
   explosion: {fileID: 2655945692870068730, guid: 574a1e26c075cc9479a36575ebc65501, type: 3}
+  damage: 1
 --- !u!114 &39868997544793885
 MonoBehaviour:
   m_ObjectHideFlags: 0

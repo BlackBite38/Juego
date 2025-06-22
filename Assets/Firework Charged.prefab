@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1437293571444832854}
   m_Layer: 10
   m_Name: Firework Charged
-  m_TagString: Firework
+  m_TagString: FireworkCharged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   speed: 12
   direction: 0
   explosion: {fileID: 7289874547795199317, guid: 162fa64a044600b478d1db5fc7fed91c, type: 3}
+  damage: 2
 --- !u!114 &4877395223593172433
 MonoBehaviour:
   m_ObjectHideFlags: 0

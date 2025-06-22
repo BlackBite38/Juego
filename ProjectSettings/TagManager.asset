@@ -13,6 +13,8 @@ TagManager:
   - stopper
   - Hole
   - reseter
+  - FireworkCharged
+  - BombCharged
   layers:
   - Default
   - TransparentFX

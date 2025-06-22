@@ -18,8 +18,12 @@ public class Boss1Test : MonoBehaviour
     [SerializeField] bool lowHealth;
     float attackSpeed;
     [SerializeField] int increase, requiredIncrease;
+    [SerializeField] int MaxHealth, Health;
+    [SerializeField] GameObject DeathExplo, ExitDoor;
+
     void Awake()
     {
+        Health=MaxHealth;
         increase = 0;
         requiredIncrease = Random.Range(8, 12);
         state = 9;
@@ -95,6 +99,12 @@ public class Boss1Test : MonoBehaviour
         {
             attackSpeed = 4;
         }
+        if(Health<=0)
+        {
+            Instantiate(DeathExplo, gameObject.transform.position, transform.rotation);
+            ExitDoor.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
     void Attack()
     {
@@ -117,6 +127,44 @@ public class Boss1Test : MonoBehaviour
             Instantiate(fireball, spawnPosition1, transform.rotation);
             Instantiate(fireball, spawnPosition2, transform.rotation);
             timer2 = 0;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Firework")
+        {
+            Health -= 1;
+        }
+        else if (other.gameObject.tag == "FireworkCharged")
+        {
+            Health -= 2;
+        }
+        else if (other.gameObject.tag == "Bomb")
+        {
+            Health -= 2;
+        }
+        else if (other.gameObject.tag == "BombCharged")
+        {
+            Health -= 4;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Firework")
+        {
+            Health -= 1;
+        }
+        else if (other.gameObject.tag == "FireworkCharged")
+        {
+            Health -= 2;
+        }
+        else if (other.gameObject.tag == "Bomb")
+        {
+            Health -= 2;
+        }
+        else if (other.gameObject.tag == "BombCharged")
+        {
+            Health -= 4;
         }
     }
 }

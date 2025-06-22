@@ -9,9 +9,9 @@ public class NPCMovementTest : MonoBehaviour
     private Rigidbody2D rb;
     Animator anim;
     [SerializeField] float speed;
-    [SerializeField] int state;
+    [SerializeField] public int state;
     [SerializeField] float timeReset;
-    [SerializeField] float timer;
+    [SerializeField] public float timer;
     SpriteRenderer spriteRenderer;
 
     void Start()
