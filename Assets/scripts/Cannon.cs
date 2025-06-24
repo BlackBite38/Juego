@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
+    [SerializeField] private Transform LeftPoint, RightPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,9 @@ public class Cannon : MonoBehaviour
     void Update()
     {
         
+    }
+    private void Attack()
+    {
+
     }
 }

@@ -8,7 +8,7 @@ public class BombBehavior : MonoBehaviour
     [SerializeField] float timer2 = 0;
     Animator anim;
     [SerializeField] GameObject explosion;
-    bool detection, exploded;
+    bool detection;
     public float spid;
     float speed;
     [SerializeField] PlayerMove Player;
@@ -93,19 +93,14 @@ public class BombBehavior : MonoBehaviour
                 anim.SetBool("Active", true);
             }
         }
-        else if(other.gameObject.tag == "Firework")
-        {
-            explode();
-        }
         else if(other.gameObject.tag =="Enemy")
         {
-//            other.GetComponent<EnemyHP>().TakeDamage(damage);
             explode();
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Firework" || other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyProyectile")
+        if (other.gameObject.tag == "Firework" || other.gameObject.tag == "FireworkCharged" || other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyProyectile")
         {
             explode();
             if (other.gameObject.tag =="Enemy")
