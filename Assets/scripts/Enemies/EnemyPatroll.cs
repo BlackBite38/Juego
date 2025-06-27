@@ -9,7 +9,7 @@ public class EnemyPatroll : MonoBehaviour
     [SerializeField] private Transform enemy;
     [SerializeField] private float speed;
     private Vector3 initScale;
-    private bool movingLeft;
+    [SerializeField] private bool movingLeft;
     [SerializeField] private float idleTime;
     private float waitTimer;
     //
@@ -33,7 +33,8 @@ public class EnemyPatroll : MonoBehaviour
         {
             if(enemy.position.x>=leftLimit.position.x)
             {
-                MoveInDirection(-1); 
+                MoveInDirection(-1);
+                enemy.GetComponent<BlackEnemy>().goingLeft=true;
             }
             else
             {
@@ -45,6 +46,7 @@ public class EnemyPatroll : MonoBehaviour
             if (enemy.position.x <= rightLimit.position.x)
             {
                 MoveInDirection(1);
+                enemy.GetComponent<BlackEnemy>().goingLeft=false;
             }
             else
             {
@@ -59,6 +61,7 @@ public class EnemyPatroll : MonoBehaviour
         if(waitTimer > idleTime)
         {
             movingLeft = !movingLeft;
+            enemy.GetComponent<BlackEnemy>().goingLeft = !enemy.GetComponent<BlackEnemy>().goingLeft;
         }
     }
     private void MoveInDirection(int _direction)

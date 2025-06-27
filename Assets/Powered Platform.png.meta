@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7368b7ee747ea574d837360a0a31e3a5
+guid: 920ad596c97d6f44a9bbfc8a91ec95fa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Falling Enemy tr_0
+      name: Powered Platform_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 128
+        x: 1
+        y: 1
+        width: 50
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e0a8ff4386439d44b559f67fc5c2b19
-      internalID: 918670576
+      spriteID: f49e310c6551c41428f2d9d18b81d91d
+      internalID: -1400863089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Falling Enemy tr_1
+      name: Powered Platform_1
       rect:
         serializedVersion: 2
-        x: 131
-        y: 0
-        width: 128
-        height: 128
+        x: 54
+        y: 1
+        width: 50
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,29 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b5590dcbc6542499db70c3904d5727
-      internalID: -1348314100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Falling Enemy tr_2
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7633afd8ac5a16c4797d4995eaba4e53
-      internalID: 675049228
+      spriteID: 7373dd8d8fc4d73479c9fbb3b42b6644
+      internalID: -468116661
       vertices: []
       indices: 
       edges: []
@@ -183,9 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Falling Enemy tr_0: 918670576
-      Falling Enemy tr_1: -1348314100
-      Falling Enemy tr_2: 675049228
+      Powered Platform_0: -1400863089
+      Powered Platform_1: -468116661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

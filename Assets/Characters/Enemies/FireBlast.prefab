@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   resetTime: 7
+  explosion: {fileID: 8428394820728262931, guid: ce5724f200b03344ca88e0a3830ea385, type: 3}
 --- !u!60 &463913614509400403
 PolygonCollider2D:
   m_ObjectHideFlags: 0

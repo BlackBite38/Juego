@@ -15,20 +15,24 @@ public class Boss1Test : MonoBehaviour
     public Transform area1, area2;
     float place1, place2, place3;
     float timer2;
-    [SerializeField] bool lowHealth;
+    [SerializeField] bool lowHealth, phase2;
     float attackSpeed;
     [SerializeField] int increase, requiredIncrease;
-    [SerializeField] int MaxHealth, Health;
+    [SerializeField] float maxHealth, health;
     [SerializeField] GameObject DeathExplo, ExitDoor;
+
+    [SerializeField] Transform introPoint;
+    [SerializeField] EnemyHP HP;
 
     void Awake()
     {
-        Health=MaxHealth;
+        HP = GetComponent<EnemyHP>();
+        //maxHealth = HP.GetComponent<EnemyHP>().MaxHealth;
         increase = 0;
         requiredIncrease = Random.Range(8, 12);
         state = 9;
         anim = GetComponent<Animator>();
-        //transform.position = points[0].position;
+        transform.position = introPoint.position;
         speed = 4;
         place1 = area1.position.x;
         place2 = area2.position.x;
@@ -40,7 +44,7 @@ public class Boss1Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //timer += Time.deltaTime;
+        //health= HP.GetComponent<EnemyHP>().Health;
         if (timer>=timeReset)
         {
             timer = 0;
@@ -99,11 +103,18 @@ public class Boss1Test : MonoBehaviour
         {
             attackSpeed = 4;
         }
-        if(Health<=0)
+        if (HP.GetComponent<EnemyHP>().Health <= 0)
         {
             Instantiate(DeathExplo, gameObject.transform.position, transform.rotation);
             ExitDoor.SetActive(true);
             gameObject.SetActive(false);
+        }
+        if (phase2 == true)
+        {
+            if (HP.GetComponent<EnemyHP>().Health < ((4 * HP.GetComponent<EnemyHP>().MaxHealth) / 10))
+            {
+                lowHealth=true;
+            }
         }
     }
     void Attack()
@@ -129,42 +140,42 @@ public class Boss1Test : MonoBehaviour
             timer2 = 0;
         }
     }
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Firework")
-        {
-            Health -= 1;
-        }
-        else if (other.gameObject.tag == "FireworkCharged")
-        {
-            Health -= 2;
-        }
-        else if (other.gameObject.tag == "Bomb")
-        {
-            Health -= 2;
-        }
-        else if (other.gameObject.tag == "BombCharged")
-        {
-            Health -= 4;
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Firework")
-        {
-            Health -= 1;
-        }
-        else if (other.gameObject.tag == "FireworkCharged")
-        {
-            Health -= 2;
-        }
-        else if (other.gameObject.tag == "Bomb")
-        {
-            Health -= 2;
-        }
-        else if (other.gameObject.tag == "BombCharged")
-        {
-            Health -= 4;
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    if (other.gameObject.tag == "Firework")
+    //    {
+    //        Health -= 1;
+    //    }
+    //    else if (other.gameObject.tag == "FireworkCharged")
+    //    {
+    //        Health -= 2;
+    //    }
+    //    else if (other.gameObject.tag == "Bomb")
+    //    {
+    //        Health -= 2;
+    //    }
+    //    else if (other.gameObject.tag == "BombCharged")
+    //    {
+    //        Health -= 4;
+    //    }
+    //}
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.gameObject.tag == "Firework")
+    //    {
+    //        Health -= 1;
+    //    }
+    //    else if (other.gameObject.tag == "FireworkCharged")
+    //    {
+    //        Health -= 2;
+    //    }
+    //    else if (other.gameObject.tag == "Bomb")
+    //    {
+    //        Health -= 2;
+    //    }
+    //    else if (other.gameObject.tag == "BombCharged")
+    //    {
+    //        Health -= 4;
+    //    }
+    //}
 }

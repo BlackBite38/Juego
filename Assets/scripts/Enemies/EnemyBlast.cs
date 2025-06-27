@@ -7,6 +7,7 @@ public class EnemyBlast : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
     private float timer;
+    [SerializeField] GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class EnemyBlast : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > resetTime)
         {
+            Instantiate(explosion, gameObject.transform.position, transform.rotation);
             gameObject.SetActive(false);
         }
     }
@@ -34,6 +36,7 @@ public class EnemyBlast : MonoBehaviour
     {
         if (collision.gameObject.tag != "Enemy" || collision.gameObject.tag != "EnemyProjectile")
         {
+            Instantiate(explosion, gameObject.transform.position, transform.rotation);
             gameObject.SetActive(false);
         }
     }

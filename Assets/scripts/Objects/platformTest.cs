@@ -11,6 +11,7 @@ public class platformTest : MonoBehaviour
     public bool activate;
     public GameObject PlatSprite;
     public Transform OG_P;
+    [SerializeField] GameObject Explo;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class platformTest : MonoBehaviour
             i++;
             if(i == (points.Length-1))
             {
+                Instantiate(Explo, transform.position, transform.rotation);
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 PlatSprite.GetComponent<SpriteRenderer>().enabled = false;
             }
@@ -43,7 +45,10 @@ public class platformTest : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        activate = true;
+        if (other.gameObject.tag == "Player")
+        {
+            activate = true;
+        }
         if (transform.position.y < other.transform.position.y)
         {
             other.transform.SetParent(transform);

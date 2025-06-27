@@ -14,8 +14,11 @@ public class BlackEnemy : MonoBehaviour
     [SerializeField] public bool flying;
     private EnemyPatroll enemyPatroll;
 
-    [SerializeField] private GameObject[] projectiles;
+    [SerializeField] private GameObject[] projectiles, projectilesRight, projectilesLeft;
     [SerializeField] private Transform offset;
+
+    [SerializeField] public bool goingLeft;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -47,8 +50,15 @@ public class BlackEnemy : MonoBehaviour
                 }
             }
         }
-
-        if(enemyPatroll != null)
+        if(goingLeft == true)
+        {
+            projectiles = projectilesLeft;
+        }
+        else
+        {
+            projectiles = projectilesRight;
+        }
+        if(enemyPatroll != null && !hasCannon)
         {
             enemyPatroll.enabled=!PlayerDetected();
         }

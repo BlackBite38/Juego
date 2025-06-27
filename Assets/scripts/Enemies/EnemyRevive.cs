@@ -14,6 +14,7 @@ public class EnemyRevive : MonoBehaviour
     void Awake()
     {
         InitialPos.position = Enemy.transform.position;
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -27,10 +28,10 @@ public class EnemyRevive : MonoBehaviour
         float height = Enemy.transform.position.y - Player.transform.position.y;
         if (side < -distance || side > distance || height < -distance || height > distance)
         {   
-            Enemy.transform.position = InitialPos.position;
             Enemy.GetComponent<EnemyHP>().Health = Enemy.GetComponent<EnemyHP>().MaxHealth;
             if(isDead==true) 
             {
+                Enemy.transform.position = InitialPos.position;
                 Enemy.gameObject.SetActive(true);
                 isDead = false;
             }

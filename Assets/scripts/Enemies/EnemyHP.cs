@@ -7,6 +7,9 @@ public class EnemyHP : MonoBehaviour
     [SerializeField] public float MaxHealth, Health, Defense;
     [SerializeField] GameObject DeathExplo;
     [SerializeField] Transform ExploPoint;
+    [SerializeField] bool isBoss, isBoss1;
+    [SerializeField] GameObject defeatEvent;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,8 +21,15 @@ public class EnemyHP : MonoBehaviour
     {
         if (Health <= 0)
         {
-            Instantiate(DeathExplo, ExploPoint.position, transform.rotation);
-            gameObject.SetActive(false);
+            if (!isBoss1)
+            {
+                Instantiate(DeathExplo, ExploPoint.position, transform.rotation);
+                gameObject.SetActive(false);
+            }
+            if (isBoss==true)
+            {
+                defeatEvent.SetActive(true);
+            }
         }
     }
     public void TakeDamage(float _damage)
