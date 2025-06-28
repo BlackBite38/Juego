@@ -5,8 +5,10 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     [SerializeField] float timer;
+    [Header("Sounds")]
+    [SerializeField] private AudioClip exploSound;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         
     }

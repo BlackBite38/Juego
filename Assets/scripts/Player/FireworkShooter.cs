@@ -9,6 +9,8 @@ public class FireworkShooter : MonoBehaviour
     Animator anim;
     [SerializeField] Transform Offset;
     [SerializeField] private GameObject[] FireworksAmmo, ChargedFireworksAmmo;
+    [Header("Sounds")]
+    [SerializeField] private AudioClip throwFirework;
 
     private void Awake()
     {

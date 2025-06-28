@@ -19,6 +19,8 @@ public class BlackEnemy : MonoBehaviour
 
     [SerializeField] public bool goingLeft;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip shootSound;
     // Start is called before the first frame update
     private void Awake()
     {

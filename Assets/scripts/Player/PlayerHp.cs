@@ -14,7 +14,8 @@ public class PlayerHp : MonoBehaviour
     [SerializeField] private int IframesAmount;
     private SpriteRenderer spriteRend;
     [SerializeField] bool Invincible;
-
+    [Header("Sounds")]
+    [SerializeField] private AudioClip hurt, KO;
 
     // Start is called before the first frame update
     void Awake()

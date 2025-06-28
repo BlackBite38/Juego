@@ -70,7 +70,6 @@ public class FallingEnemy : MonoBehaviour
             if(resetTimer<=0)
             {
                 Attacking = true;
-                print("a");
             }
         }
         if (Attacking == true)

@@ -28,6 +28,8 @@ public class PlayerMove : MonoBehaviour
 
     public float canShoot;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip JumpSound, throwBomb;
 
     void Awake()
     {

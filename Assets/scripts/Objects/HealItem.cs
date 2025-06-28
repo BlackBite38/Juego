@@ -5,6 +5,8 @@ using UnityEngine;
 public class HealthItem : MonoBehaviour
 {
     [SerializeField] private float Healing;
+    [Header("Sounds")]
+    [SerializeField] private AudioClip healSound;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

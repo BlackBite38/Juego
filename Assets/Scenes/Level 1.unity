@@ -6966,6 +6966,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 44566967234632724, guid: 04661cdf086308641893b632659bb30e, type: 3}
+      propertyPath: boxCollider
+      value: 
+      objectReference: {fileID: 2124131949}
     - target: {fileID: 1126632482443419495, guid: 04661cdf086308641893b632659bb30e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -18780,6 +18784,11 @@ SpriteRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6665998660999310971, guid: 15cf203d8448a58499e28ccce0054d98, type: 3}
   m_PrefabInstance: {fileID: 2930538660029771781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2124131949 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4732195886412847269, guid: 04661cdf086308641893b632659bb30e, type: 3}
+  m_PrefabInstance: {fileID: 775152113}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &397847157051465241
 PrefabInstance:

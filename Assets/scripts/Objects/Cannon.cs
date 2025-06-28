@@ -18,6 +18,8 @@ public class Cannon : MonoBehaviour
     [SerializeField] private GameObject[] projectiles, projectilesLeft, projectilesRight;
     [SerializeField] private Transform offsetLeft, offsetRight, currentOffset;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip shootSound;
     // Start is called before the first frame update
     void Awake()
     {
