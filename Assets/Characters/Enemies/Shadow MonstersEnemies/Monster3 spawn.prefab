@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackCooldown: 2
-  range: 5
-  colliderDistance: 1
+  range: 10
+  colliderDistance: 0.75
   boxCollider: {fileID: 5691846744573934640}
   PlayerLayer:
     serializedVersion: 2
@@ -196,6 +196,7 @@ MonoBehaviour:
   - {fileID: 4353768827424817869}
   offset: {fileID: 5231688738070090702}
   goingLeft: 0
+  shootSound: {fileID: 0}
 --- !u!114 &5508758698289522860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +214,9 @@ MonoBehaviour:
   Defense: 0
   DeathExplo: {fileID: 7201355856211896975, guid: 15cf203d8448a58499e28ccce0054d98, type: 3}
   ExploPoint: {fileID: 5966917656935544088}
+  isBoss: 0
+  isBoss1: 0
+  defeatEvent: {fileID: 0}
 --- !u!61 &5691846744573934640
 BoxCollider2D:
   m_ObjectHideFlags: 0

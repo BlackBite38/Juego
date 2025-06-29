@@ -5,12 +5,12 @@ using UnityEngine;
 public class CameraTest : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform player;
+    public GameObject player;
 
 
-    void Start()
+    void Awake()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
