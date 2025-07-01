@@ -13,6 +13,7 @@ public class HealthItem : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.GetComponent<PlayerHp>().AddHP(Healing);
+            SoundManager.instance.PlaySound(healSound);
             gameObject.SetActive(false);
         }
     }

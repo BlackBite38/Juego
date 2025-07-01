@@ -476,6 +476,9 @@ MonoBehaviour:
   Defense: 5
   DeathExplo: {fileID: 7201355856211896975, guid: 15cf203d8448a58499e28ccce0054d98, type: 3}
   ExploPoint: {fileID: 5129619148484825397}
+  isBoss: 0
+  isBoss1: 0
+  defeatEvent: {fileID: 0}
 --- !u!114 &6871374045563864054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,6 +507,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Top: {fileID: 5948891029463898845}
   Bottom: {fileID: 2025874433607326140}
+  soundZone: {fileID: 2690678034928433882}
   state: 0
   risingSpeed: 5
   attackSpeed: 10
@@ -516,6 +520,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   resetTimer: 0
+  impactSound: {fileID: 8300000, guid: 876c16948ef4ce34cb3104ee75132016, type: 3}
 --- !u!1 &2537141659965204961
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +692,7 @@ Transform:
   - {fileID: 5129619148484825397}
   - {fileID: 5948891029463898845}
   - {fileID: 2025874433607326140}
+  - {fileID: 2690678034928433882}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8309340766047856115
@@ -800,3 +806,34 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!1 &8803704914637620730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2690678034928433882}
+  m_Layer: 0
+  m_Name: SoundZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2690678034928433882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803704914637620730}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7762211881975852908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

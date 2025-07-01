@@ -48,6 +48,7 @@ public class BlackEnemy : MonoBehaviour
                 {
                     CooldownTimer = 0;
                     anim.SetTrigger("Shoot");
+                    SoundManager.instance.PlaySound(shootSound);
                     //Shoot();
                 }
             }

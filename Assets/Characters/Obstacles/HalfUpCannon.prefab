@@ -278,6 +278,7 @@ MonoBehaviour:
   offsetLeft: {fileID: 4470831180002281426}
   offsetRight: {fileID: 4345375234169772222}
   currentOffset: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 5dd2e609656de9c439351adc5a2c7800, type: 3}
 --- !u!61 &1553319711137401230
 BoxCollider2D:
   m_ObjectHideFlags: 0

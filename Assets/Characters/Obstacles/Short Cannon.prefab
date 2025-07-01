@@ -415,7 +415,6 @@ MonoBehaviour:
   waitTimer: 0
   side: 1
   Player: {fileID: 0}
-  objectSide: {fileID: 2512733766160503870}
   projectiles: []
   projectilesLeft:
   - {fileID: 9150455613963530476}
@@ -432,6 +431,7 @@ MonoBehaviour:
   offsetLeft: {fileID: 8298703833332459122}
   offsetRight: {fileID: 2385851087628462019}
   currentOffset: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 5dd2e609656de9c439351adc5a2c7800, type: 3}
 --- !u!61 &7267780314575107276
 BoxCollider2D:
   m_ObjectHideFlags: 0

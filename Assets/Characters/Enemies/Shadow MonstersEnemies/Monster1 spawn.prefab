@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8592938138645216958}
   - component: {fileID: 4244912301140138899}
   - component: {fileID: 2481478128063975048}
-  - component: {fileID: 4079093711140644573}
+  - component: {fileID: 2844028937711661950}
   - component: {fileID: 1691817413941658960}
   - component: {fileID: 611761390391906786}
   - component: {fileID: 789738979407808993}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!114 &4079093711140644573
+--- !u!114 &2844028937711661950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,10 +246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5ffe0d6be577848b3fb9b4533b669f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackCooldown: 1
+  AttackCooldown: 0
   range: 0
   colliderDistance: 0
-  boxCollider: {fileID: 611761390391906786}
+  boxCollider: {fileID: 5321175148546009583}
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -257,7 +257,11 @@ MonoBehaviour:
   hasCannon: 0
   flying: 0
   projectiles: []
+  projectilesRight: []
+  projectilesLeft: []
   offset: {fileID: 0}
+  goingLeft: 0
+  shootSound: {fileID: 0}
 --- !u!114 &1691817413941658960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +279,9 @@ MonoBehaviour:
   Defense: 0
   DeathExplo: {fileID: 7201355856211896975, guid: 15cf203d8448a58499e28ccce0054d98, type: 3}
   ExploPoint: {fileID: 1174031146488220460}
+  isBoss: 0
+  isBoss1: 0
+  defeatEvent: {fileID: 0}
 --- !u!61 &611761390391906786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -510,4 +517,5 @@ MonoBehaviour:
   rightLimit: {fileID: 324353510107511415}
   enemy: {fileID: 3767137655305620458}
   speed: 3
+  movingLeft: 0
   idleTime: 2

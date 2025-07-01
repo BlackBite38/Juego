@@ -10,6 +10,8 @@ public class LockedDoor : MonoBehaviour
     [SerializeField] private SpriteRenderer[] spriteLeftLock, spriteRightLock;
     private bool leftLockOpen, rightLockOpen, activeDoors;
     [SerializeField] private bool leftButtonOn, rightButtonOn;
+    [Header("Sounds")]
+    [SerializeField] private AudioClip doorOpened;
     // Start is called before the first frame update
     void Awake()
     {
@@ -56,6 +58,10 @@ public class LockedDoor : MonoBehaviour
         }
         if (leftLockOpen == true && rightLockOpen == true)
         {
+            if (doorOpened != null)
+            {
+                SoundManager.instance.PlaySound(doorOpened);
+            }
             activeDoors = true;
         }
         else

@@ -29,7 +29,7 @@ public class PlayerMove : MonoBehaviour
     public float canShoot;
 
     [Header("Sounds")]
-    [SerializeField] private AudioClip JumpSound, throwBomb;
+    [SerializeField] private AudioClip JumpSound, throwBombSound;
 
     void Awake()
     {
@@ -171,6 +171,7 @@ public class PlayerMove : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jump);
             anim.SetTrigger("Jump");
+            SoundManager.instance.PlaySound(JumpSound);
             //Grounded = false;
         }
         else if(onWall() && !isGrounded())
@@ -183,6 +184,7 @@ public class PlayerMove : MonoBehaviour
             {
                 rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 5, 7);
                 transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                SoundManager.instance.PlaySound(JumpSound);
             }
             wallJumpCooldown = 0;
         }
@@ -192,6 +194,7 @@ public class PlayerMove : MonoBehaviour
         if (!Crouching && !onWall())
         {
             anim.SetTrigger("BombThr");
+            SoundManager.instance.PlaySound(throwBombSound);
             Instantiate(BombT, BombOffset1.position, transform.rotation);
             AttackCooldown += 1;
         }
@@ -211,6 +214,7 @@ public class PlayerMove : MonoBehaviour
         if (!Crouching && !onWall())
         {
             anim.SetTrigger("BombThr");
+            SoundManager.instance.PlaySound(throwBombSound);
             Instantiate(BombTCharged, BombOffsetCharged1.position, transform.rotation);
             AttackCooldown += 1;
         }

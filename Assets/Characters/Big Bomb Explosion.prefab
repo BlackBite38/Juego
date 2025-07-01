@@ -120,3 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
+  exploSound: {fileID: 8300000, guid: d4c30d928cfe8b042a283035ad17b612, type: 3}

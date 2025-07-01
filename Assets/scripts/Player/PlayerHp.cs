@@ -14,6 +14,9 @@ public class PlayerHp : MonoBehaviour
     [SerializeField] private int IframesAmount;
     private SpriteRenderer spriteRend;
     [SerializeField] bool Invincible;
+
+    [SerializeField] GameObject KO_anim;
+    bool deadAnim;
     [Header("Sounds")]
     [SerializeField] private AudioClip hurt, KO;
 
@@ -24,6 +27,7 @@ public class PlayerHp : MonoBehaviour
         InvincibilityTimer = 0;
         Invincible = false;
         dead = false;
+        deadAnim = false;
         spriteRend = GetComponent<SpriteRenderer>();
     }
     // Update is called once per frame
@@ -42,13 +46,18 @@ public class PlayerHp : MonoBehaviour
         {
             dead = false;
             GetComponent<PlayerMove>().enabled = true;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            KO_anim.transform.position = transform.position;
+            KO_anim.SetActive(false);
+            deadAnim = false;
         }
     }
     public void TakeDamage(float _damage)
     {
-        if(!Invincible)
+        if(!Invincible && CurrentHealth>0)
         {   //resta el daño a la vida
             CurrentHealth = Mathf.Clamp(CurrentHealth - _damage, 0, MaxHealth);
+            SoundManager.instance.PlaySound(hurt);
         }
         //frames de invencibilidad
         if (CurrentHealth > 0 && !Invincible)
@@ -64,6 +73,13 @@ public class PlayerHp : MonoBehaviour
                 GetComponent<PlayerMove>().enabled = false;
                 dead = true;
             }
+        }
+        if(CurrentHealth<=0 && deadAnim==false)
+        {
+            SoundManager.instance.PlaySound(KO);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            KO_anim.SetActive(true);
+            deadAnim=true;
         }
     }
     public void AddHP(float _heal)

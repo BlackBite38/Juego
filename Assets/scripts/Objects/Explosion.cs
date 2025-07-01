@@ -7,10 +7,12 @@ public class Explosion : MonoBehaviour
     [SerializeField] float timer;
     [Header("Sounds")]
     [SerializeField] private AudioClip exploSound;
+
     // Start is called before the first frame update
     void Awake()
     {
-        
+        if (exploSound != null)
+            SoundManager.instance.PlaySound(exploSound);
     }
 
     // Update is called once per frame

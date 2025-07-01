@@ -196,7 +196,7 @@ MonoBehaviour:
   - {fileID: 4353768827424817869}
   offset: {fileID: 5231688738070090702}
   goingLeft: 0
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 5dd2e609656de9c439351adc5a2c7800, type: 3}
 --- !u!114 &5508758698289522860
 MonoBehaviour:
   m_ObjectHideFlags: 0

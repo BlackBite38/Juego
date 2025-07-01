@@ -28,6 +28,7 @@ public class FireworkShooter : MonoBehaviour
         {
             if (playerControler.GetComponent<PlayerMove>().weaponType == 1 && playerControler.GetComponent<PlayerMove>().canShoot==0)
             {
+                SoundManager.instance.PlaySound(throwFirework);
                 if (playerControler.GetComponent<PlayerMove>().chargeAmount < 1)
                 {
                     Attack();

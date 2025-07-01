@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3568483494974770879}
   - component: {fileID: 7438980126851471632}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Throwning offset up
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2775789664415093616}
   - component: {fileID: 8952502522895086372}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Dropping offset
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6896534581737315420}
   - component: {fileID: 6384603211353760966}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Throwning offset side  Charge
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6222664868044942150}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Los Fireworks no funcionan si estan dentro del personaje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8506252660008791558}
   - component: {fileID: 4384639944027408013}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Hitbox crouching
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 940637899771884653}
   - component: {fileID: 3799901978231783008}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Throwning offset side
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -496,7 +496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 142695533209021346}
   - component: {fileID: 2823647847450279379}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Dropping offset  Charge
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -573,7 +573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4760635744499632492}
   - component: {fileID: 5796095674708213263}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Throwning offset up Charge
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -717,6 +717,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3084363150727194035}
   - {fileID: 3187387192251557179}
   - {fileID: 8506252660008791558}
   - {fileID: 940637899771884653}
@@ -811,6 +812,7 @@ MonoBehaviour:
   - {fileID: 2923858515919805876}
   - {fileID: 7178384132429390794}
   - {fileID: 1645635384071676631}
+  throwFirework: {fileID: 8300000, guid: b3f6a050772d0b44a85f2371f4798e11, type: 3}
 --- !u!114 &3334280391347312013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +850,8 @@ MonoBehaviour:
   chargeAmount: 0
   direction: 0
   canShoot: 0
+  JumpSound: {fileID: 8300000, guid: c059094d6c3c8cd46afed8ff5a32221c, type: 3}
+  throwBombSound: {fileID: 8300000, guid: 4e3f100d5c156ef4ebdbeeb2e16f00c4, type: 3}
 --- !u!61 &7488869954670499916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -951,7 +955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3187387192251557179}
   - component: {fileID: 5986456850556843905}
-  m_Layer: 6
+  m_Layer: 4
   m_Name: Hitbox normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,6 +1250,77 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7415267462134390813, guid: a3a39c801b096e74daddb7e2a089ce0b, type: 3}
   m_PrefabInstance: {fileID: 393761699247244247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1056864088963549106
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 357935077846501157}
+    m_Modifications:
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266577209667165213, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_Name
+      value: KleeKO
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266577209667165213, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+--- !u!1 &2593944606459763631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3266577209667165213, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+  m_PrefabInstance: {fileID: 1056864088963549106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3084363150727194035 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2623179363841745409, guid: 9a229c4e227e25d4db2511ed8678d2f0, type: 3}
+  m_PrefabInstance: {fileID: 1056864088963549106}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1608034795619772772
 PrefabInstance:
@@ -1683,13 +1758,16 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2899074644570298381, guid: a2de0a3efc3f3824397e13459f095d54, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 6896534581737315420}
+      insertIndex: 0
+      addedObject: {fileID: 3084363150727194035}
     - targetCorrespondingSourceObject: {fileID: 2899074644570298381, guid: a2de0a3efc3f3824397e13459f095d54, type: 3}
       insertIndex: 4
-      addedObject: {fileID: 3568483494974770879}
+      addedObject: {fileID: 6896534581737315420}
     - targetCorrespondingSourceObject: {fileID: 2899074644570298381, guid: a2de0a3efc3f3824397e13459f095d54, type: 3}
       insertIndex: 5
+      addedObject: {fileID: 3568483494974770879}
+    - targetCorrespondingSourceObject: {fileID: 2899074644570298381, guid: a2de0a3efc3f3824397e13459f095d54, type: 3}
+      insertIndex: 6
       addedObject: {fileID: 4760635744499632492}
     - targetCorrespondingSourceObject: {fileID: 2899074644570298381, guid: a2de0a3efc3f3824397e13459f095d54, type: 3}
       insertIndex: -1
@@ -1720,6 +1798,9 @@ MonoBehaviour:
   IframesDuration: 1
   IframesAmount: 3
   Invincible: 0
+  KO_anim: {fileID: 2593944606459763631}
+  hurt: {fileID: 8300000, guid: 454be27fec21af241810893ea0664d2e, type: 3}
+  KO: {fileID: 8300000, guid: 5faacf2ecbc6435428f44b1b9c57e9a9, type: 3}
 --- !u!1001 &5655381677790133673
 PrefabInstance:
   m_ObjectHideFlags: 0

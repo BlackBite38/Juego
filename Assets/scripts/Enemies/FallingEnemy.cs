@@ -5,7 +5,7 @@ using UnityEngine;
 public class FallingEnemy : MonoBehaviour
 {
     [SerializeField] GameObject Player;
-    [SerializeField] Transform Top, Bottom;
+    [SerializeField] Transform Top, Bottom, soundZone;
     //private Rigidbody2D rb;
     [SerializeField] int state;
     [SerializeField] float risingSpeed, attackSpeed;
@@ -18,6 +18,9 @@ public class FallingEnemy : MonoBehaviour
     [SerializeField] private LayerMask PlayerLayer;
     [SerializeField] private float resetTimer;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip impactSound;
+    bool soundMade;
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,6 +29,7 @@ public class FallingEnemy : MonoBehaviour
         anim = GetComponent<Animator>();
         Attacking = false;
         resetTimer = 0;
+        soundMade = false;
     }
 
     // Update is called once per frame
@@ -39,11 +43,20 @@ public class FallingEnemy : MonoBehaviour
             {
                 resetTimer -= Time.deltaTime;
             }
+            soundMade = false;
         }
         if (state == 1)
         {
             anim.SetBool("Attack", true);
             Attack();
+            if (transform.position.y <= soundZone.position.y)
+            {
+                if (soundMade == false)
+                {
+                    SoundManager.instance.PlaySound(impactSound);
+                    soundMade = true;
+                }
+            }
             if (transform.position == Bottom.position)
             {
                 timer += Time.deltaTime;

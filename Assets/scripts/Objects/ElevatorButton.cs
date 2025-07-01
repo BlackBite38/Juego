@@ -5,7 +5,8 @@ using UnityEngine;
 public class ElevatorButton : MonoBehaviour
 {
     [SerializeField] Elevator _elevator;
-    
+    [Header("Sounds")]
+    [SerializeField] private AudioClip buttonSound;
     // Start is called before the first frame update
     void Awakw()
     {
@@ -23,6 +24,7 @@ public class ElevatorButton : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && _elevator.GetComponent<Elevator>().active == false)
             {
+                SoundManager.instance.PlaySound(buttonSound);
                 _elevator.GetComponent<Elevator>().active = true;
             }
         }
@@ -33,6 +35,7 @@ public class ElevatorButton : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && _elevator.GetComponent<Elevator>().active == false)
             {
+                SoundManager.instance.PlaySound(buttonSound);
                 _elevator.GetComponent<Elevator>().active = true;
             }
         }

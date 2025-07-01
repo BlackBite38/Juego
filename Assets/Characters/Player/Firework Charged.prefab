@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7415267462134390813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.79, y: 3.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104,6 +104,7 @@ MonoBehaviour:
   direction: 0
   explosion: {fileID: 7289874547795199317, guid: 162fa64a044600b478d1db5fc7fed91c, type: 3}
   damage: 2
+  launchSound: {fileID: 8300000, guid: b3f6a050772d0b44a85f2371f4798e11, type: 3}
 --- !u!95 &5033866780952277944
 Animator:
   serializedVersion: 5

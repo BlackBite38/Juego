@@ -43,6 +43,7 @@ public class Cannon : MonoBehaviour
                 {
                     CooldownTimer = 0;
                     CannonShoot();
+                    SoundManager.instance.PlaySound(shootSound);
                     waitTimer = 0;
                 }
             }

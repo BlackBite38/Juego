@@ -34,9 +34,9 @@ public class FireworkProjectile : MonoBehaviour
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("end");
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.GetComponent<EnemyHP>() != null)
         {
-            collision.GetComponent<EnemyHP>().TakeDamage(damage);
+            collision.gameObject.GetComponent<EnemyHP>().TakeDamage(damage);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
