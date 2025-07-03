@@ -217,6 +217,12 @@ MonoBehaviour:
   isBoss: 0
   isBoss1: 0
   defeatEvent: {fileID: 0}
+  damageSound: {fileID: 0}
+  ItemDrops:
+  - ItemPrefab: {fileID: 2351328887149651839, guid: 8457d054977925f498583d477794c8f4, type: 3}
+    dropChance: 25
+  - ItemPrefab: {fileID: 6112195051628186166, guid: 0dd6246a1d5a1f142b37c0d416650c65, type: 3}
+    dropChance: 10
 --- !u!61 &5691846744573934640
 BoxCollider2D:
   m_ObjectHideFlags: 0

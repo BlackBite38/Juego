@@ -199,6 +199,7 @@ MonoBehaviour:
   rightLimit: {fileID: 2379965463907530034}
   enemy: {fileID: 1626147631942871008}
   speed: 1
+  movingLeft: 0
   idleTime: 0
 --- !u!114 &790232326270199957
 MonoBehaviour:
@@ -371,7 +372,11 @@ MonoBehaviour:
   hasCannon: 0
   flying: 1
   projectiles: []
+  projectilesRight: []
+  projectilesLeft: []
   offset: {fileID: 0}
+  goingLeft: 0
+  shootSound: {fileID: 0}
 --- !u!114 &5092677811186100229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +394,15 @@ MonoBehaviour:
   Defense: 0
   DeathExplo: {fileID: 7201355856211896975, guid: 15cf203d8448a58499e28ccce0054d98, type: 3}
   ExploPoint: {fileID: 7606977679147577632}
+  isBoss: 0
+  isBoss1: 0
+  defeatEvent: {fileID: 0}
+  damageSound: {fileID: 0}
+  ItemDrops:
+  - ItemPrefab: {fileID: 2351328887149651839, guid: 8457d054977925f498583d477794c8f4, type: 3}
+    dropChance: 25
+  - ItemPrefab: {fileID: 6112195051628186166, guid: 0dd6246a1d5a1f142b37c0d416650c65, type: 3}
+    dropChance: 10
 --- !u!61 &2365758891676654878
 BoxCollider2D:
   m_ObjectHideFlags: 0

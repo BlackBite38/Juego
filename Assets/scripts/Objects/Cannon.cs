@@ -17,6 +17,9 @@ public class Cannon : MonoBehaviour
 
     [SerializeField] private GameObject[] projectiles, projectilesLeft, projectilesRight;
     [SerializeField] private Transform offsetLeft, offsetRight, currentOffset;
+    [Header("Random Shooting")]
+    [SerializeField] private bool isRandom;
+    [SerializeField] private float RanMin, RanMax;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip shootSound;
@@ -28,6 +31,10 @@ public class Cannon : MonoBehaviour
         scaleChangeRight = new Vector3(-1, 1, 1);
         currentOffset=offsetLeft;
         Player = GameObject.FindGameObjectWithTag("Player");
+        if(isRandom)
+        {
+            AttackCooldown = Random.Range(RanMin, RanMax);
+        }
     }
 
     // Update is called once per frame
@@ -45,6 +52,10 @@ public class Cannon : MonoBehaviour
                     CannonShoot();
                     SoundManager.instance.PlaySound(shootSound);
                     waitTimer = 0;
+                    if (isRandom)
+                    {
+                        AttackCooldown = Random.Range(RanMin, RanMax);
+                    }
                 }
             }
         }

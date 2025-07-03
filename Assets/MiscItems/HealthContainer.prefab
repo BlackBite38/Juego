@@ -216,6 +216,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Healing: 2
+  stageMade: 0
+  Timer: 0
+  Timer2: 0
+  lifeTime: 3
+  TframesDuration: 4
+  TframesAmount: 3
+  healSound: {fileID: 8300000, guid: 2e20bd257019d0448b25cb772b90d361, type: 3}
 --- !u!60 &2166346584059637516
 PolygonCollider2D:
   m_ObjectHideFlags: 0

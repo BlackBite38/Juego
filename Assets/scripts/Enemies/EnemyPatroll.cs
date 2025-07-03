@@ -23,7 +23,8 @@ public class EnemyPatroll : MonoBehaviour
     }
     private void OnDisable()
     {
-        anim.SetBool("Walking", false);
+        if (anim != null)
+            anim.SetBool("Walking", false);
     }
 
     // Update is called once per frame
@@ -34,7 +35,8 @@ public class EnemyPatroll : MonoBehaviour
             if(enemy.position.x>=leftLimit.position.x)
             {
                 MoveInDirection(-1);
-                enemy.GetComponent<BlackEnemy>().goingLeft=true;
+                if (enemy.GetComponent<BlackEnemy>() != null)
+                    enemy.GetComponent<BlackEnemy>().goingLeft=true;
             }
             else
             {
@@ -46,7 +48,8 @@ public class EnemyPatroll : MonoBehaviour
             if (enemy.position.x <= rightLimit.position.x)
             {
                 MoveInDirection(1);
-                enemy.GetComponent<BlackEnemy>().goingLeft=false;
+                if (enemy.GetComponent<BlackEnemy>() != null)
+                    enemy.GetComponent<BlackEnemy>().goingLeft=false;
             }
             else
             {
@@ -56,12 +59,14 @@ public class EnemyPatroll : MonoBehaviour
     }
     private void DirectionChange()
     {
-        anim.SetBool("Walking", false);
+        if (anim != null)
+            anim.SetBool("Walking", false);
         waitTimer += Time.deltaTime;
         if(waitTimer > idleTime)
         {
             movingLeft = !movingLeft;
-            enemy.GetComponent<BlackEnemy>().goingLeft = !enemy.GetComponent<BlackEnemy>().goingLeft;
+            if(enemy.GetComponent<BlackEnemy>() != null)
+                enemy.GetComponent<BlackEnemy>().goingLeft = !enemy.GetComponent<BlackEnemy>().goingLeft;
         }
     }
     private void MoveInDirection(int _direction)
@@ -69,14 +74,15 @@ public class EnemyPatroll : MonoBehaviour
         waitTimer = 0;
         if (enemy.GetComponent<BlackEnemy>() != null)
         {
-            if (enemy.GetComponent<BlackEnemy>().flying == false)
+            if (enemy.GetComponent<BlackEnemy>().flying == false && anim != null)
             { 
                 anim.SetBool("Walking", true);
             }
         }
         else
         {
-            anim.SetBool("Walking", true);
+            if (anim != null)
+                anim.SetBool("Walking", true);
         }
         enemy.localScale=new Vector3(Mathf.Abs(initScale.x) *_direction, enemy.localScale.y, enemy.localScale.z);
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed, enemy.position.y, enemy.position.z);

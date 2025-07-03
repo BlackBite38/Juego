@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHp : MonoBehaviour
 {
     [Header("Health")]
-    [SerializeField] float MaxHealth;
+    [SerializeField] public float MaxHealth;
     public float CurrentHealth { get; private set; }
     [SerializeField] bool dead;
     [Header("Iframes")]
@@ -51,6 +51,10 @@ public class PlayerHp : MonoBehaviour
             KO_anim.SetActive(false);
             deadAnim = false;
         }
+        if(Input.GetKeyUp(KeyCode.V))
+        {
+            Respawn();
+        }
     }
     public void TakeDamage(float _damage)
     {
@@ -86,6 +90,11 @@ public class PlayerHp : MonoBehaviour
     {
         CurrentHealth = Mathf.Clamp(CurrentHealth + _heal, 0, MaxHealth);
     }
+    public void Respawn()
+    {
+        CurrentHealth=MaxHealth;
+    }
+
     private IEnumerator Invulnerability()
     {   //hace al personaje parpadear al recibir daño
         for (int i =0; i<IframesAmount; i++)

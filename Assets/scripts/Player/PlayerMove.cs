@@ -16,6 +16,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] LayerMask groundLayer, wallLayer;
     private float wallJumpCooldown;
     private float HorizontalInput;
+
+    [SerializeField] float wallJumpX, wallJumpY;
+    [SerializeField] BoxCollider2D hitBox;
+
     [Header("Attacks")]
     [SerializeField] public float AttackCooldown;
     [SerializeField] public int weaponType;   //    weapon[];
@@ -28,6 +32,10 @@ public class PlayerMove : MonoBehaviour
 
     public float canShoot;
 
+    [Header("Coyote Time")]
+    [SerializeField] private float coyoteTime;
+    [SerializeField]  private float coyoteCount;
+
     [Header("Sounds")]
     [SerializeField] private AudioClip JumpSound, throwBombSound;
 
@@ -36,6 +44,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        hitBox = boxCollider;
         direction = 1;
         spid=speed;
         chargeAmount = 0;
@@ -78,12 +87,12 @@ public class PlayerMove : MonoBehaviour
             Crouching = false;
             spid = speed;
         }
-        //salto en paredes
+        //salto en paredes antiguo
         if (wallJumpCooldown > 0.2f)
         {
             rb.velocity = new Vector2(HorizontalInput * spid, rb.velocity.y);
-            
-            if (onWall() && !isGrounded())
+
+            if (onWall() )// && !isGrounded())
             {
                 rb.gravityScale = 0;
                 rb.velocity = Vector2.zero;
@@ -91,19 +100,52 @@ public class PlayerMove : MonoBehaviour
             else
             {
                 rb.gravityScale = 2;
+                if (isGrounded())
+                {
+                    coyoteCount = coyoteTime;
+                }
+                else
+                    coyoteCount -= Time.deltaTime;
             }
-            
+
             if (Input.GetKeyDown(KeyCode.Space)) //Grounded && !Crouching)
             {
                 Jump();
             }
+            if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 2);
         }
         else
         {
             wallJumpCooldown += Time.deltaTime;
         }
+        //if (isGrounded())
+        //{
+        //    coyoteCount = coyoteTime;
+        //}
+        //else
+        //    coyoteCount -= Time.deltaTime;
+
+        //        salto nuevo
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Jump();
+        //} //salto ajustable
+        //if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
+        //    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 2);
+        //if (onWall() && !isGrounded())
+        //{
+        //    rb.gravityScale = 0;
+        //    rb.velocity = Vector2.zero;
+        //}
+        //else
+        //{
+        //    rb.gravityScale = 2;
+        //    rb.velocity = new Vector2(HorizontalInput * spid, rb.velocity.y);
+        //}//aqui termina el salto nuevo
+
         //armas
-        if(AttackCooldown>0)
+        if (AttackCooldown>0)
         {
             AttackCooldown -= Time.deltaTime*2;
         }
@@ -159,35 +201,77 @@ public class PlayerMove : MonoBehaviour
         else if(Crouching==true)
         {
             canShoot = 1;
+            hitBox.size = new Vector2(1.1f, 0.85f);
+            hitBox.offset = new Vector2(0.05f,0.425f);
         }
         else
         {
             canShoot=0;
+            hitBox.size = new Vector2(1.1f, 1.75f);
+            hitBox.offset = new Vector2(0.05f, 0.875f);
         }
     }
     void Jump()
     {
-        if(isGrounded() && !Crouching)
+        if(coyoteCount<=0 && !onWall()) return;
+
+        anim.SetTrigger("Jump");
+        SoundManager.instance.PlaySound(JumpSound);
+
+        if(onWall())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jump);
-            anim.SetTrigger("Jump");
-            SoundManager.instance.PlaySound(JumpSound);
-            //Grounded = false;
+            WallJump();
         }
-        else if(onWall() && !isGrounded())
+        else
         {
-            if (HorizontalInput == 0)
+            if(isGrounded() && !Crouching)
             {
-                rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
-            }
-            else
-            {
-                rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 5, 7);
-                transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                rb.velocity = new Vector2(rb.velocity.x, jump);
+                anim.SetTrigger("Jump");
                 SoundManager.instance.PlaySound(JumpSound);
             }
-            wallJumpCooldown = 0;
+            else if(!isGrounded() && !Crouching)
+            {
+                if(coyoteCount>0)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, jump);
+                    anim.SetTrigger("Jump");
+                    SoundManager.instance.PlaySound(JumpSound);
+                }
+                coyoteCount = 0;
+            }
+            
         }
+
+        //if (isGrounded() && !Crouching)
+        //{
+        //    rb.velocity = new Vector2(rb.velocity.x, jump);
+        //    anim.SetTrigger("Jump");
+        //    SoundManager.instance.PlaySound(JumpSound);
+        //    //Grounded = false;
+        //}
+        //else if(onWall() && !isGrounded())
+        //{
+        //    if (HorizontalInput == 0)
+        //    {
+        //        rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
+        //        anim.SetTrigger("Jump");
+        //    }
+        //    else
+        //    {
+        //        rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 5, 7);
+        //        transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        //        anim.SetTrigger("Jump");
+        //        SoundManager.instance.PlaySound(JumpSound);
+        //    }
+        //    wallJumpCooldown = 0;
+        //}
+    }
+
+    private void WallJump()
+    {
+        rb.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
+        wallJumpCooldown= 0;
     }
     void BombThrow()
     {

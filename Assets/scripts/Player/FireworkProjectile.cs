@@ -38,6 +38,10 @@ public class FireworkProjectile : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyHP>().TakeDamage(damage);
         }
+        if (collision.GetComponent<BringerOfDeath>() != null)
+        {
+            collision.GetComponent<BringerOfDeath>().TakeDamage(damage);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

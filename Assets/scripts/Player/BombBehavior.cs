@@ -105,7 +105,10 @@ public class BombBehavior : MonoBehaviour
             explode();
             if (other.gameObject.tag =="Enemy")
             {
-                other.GetComponent<EnemyHP>().TakeDamage(damage);
+                if (other.GetComponent<EnemyHP>() != null)
+                    other.GetComponent<EnemyHP>().TakeDamage(damage);
+                if (other.GetComponent<BringerOfDeath>() != null)
+                    other.GetComponent<BringerOfDeath>().TakeDamage(damage);
             }
         }
     }

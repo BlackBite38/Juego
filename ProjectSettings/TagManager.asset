@@ -16,6 +16,7 @@ TagManager:
   - FireworkCharged
   - BombCharged
   - FxTemporaire
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

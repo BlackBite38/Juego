@@ -19,11 +19,13 @@ public class Boss1Test : MonoBehaviour
     float attackSpeed;
     [SerializeField] int increase, requiredIncrease;
     [SerializeField] float maxHealth, health;
-    [SerializeField] GameObject DeathExplo, ExitDoor;
+    [SerializeField] GameObject DeathExplo, ExitDoor, spawn, player;
 
     [SerializeField] Transform introPoint;
     [SerializeField] EnemyHP HP;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip deathSound;
     void Awake()
     {
         HP = GetComponent<EnemyHP>();
@@ -39,11 +41,16 @@ public class Boss1Test : MonoBehaviour
         place3 = area1.position.y;
         lowHealth = false;
         gameObject.GetComponent<BoxCollider2D>().enabled =false;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(player.GetComponent< PlayerHp>().CurrentHealth<=0)
+        {
+            OnPlayerKO();
+        }
         //health= HP.GetComponent<EnemyHP>().Health;
         if (timer>=timeReset)
         {
@@ -106,7 +113,9 @@ public class Boss1Test : MonoBehaviour
         if (HP.GetComponent<EnemyHP>().Health <= 0)
         {
             Instantiate(DeathExplo, gameObject.transform.position, transform.rotation);
-            ExitDoor.SetActive(true);
+            spawn.GetComponent<spawn>().bossDead = true;
+            if(ExitDoor!=null)
+                ExitDoor.SetActive(true);
             gameObject.SetActive(false);
         }
         if (phase2 == true)
@@ -140,42 +149,21 @@ public class Boss1Test : MonoBehaviour
             timer2 = 0;
         }
     }
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (other.gameObject.tag == "Firework")
-    //    {
-    //        Health -= 1;
-    //    }
-    //    else if (other.gameObject.tag == "FireworkCharged")
-    //    {
-    //        Health -= 2;
-    //    }
-    //    else if (other.gameObject.tag == "Bomb")
-    //    {
-    //        Health -= 2;
-    //    }
-    //    else if (other.gameObject.tag == "BombCharged")
-    //    {
-    //        Health -= 4;
-    //    }
-    //}
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.tag == "Firework")
-    //    {
-    //        Health -= 1;
-    //    }
-    //    else if (other.gameObject.tag == "FireworkCharged")
-    //    {
-    //        Health -= 2;
-    //    }
-    //    else if (other.gameObject.tag == "Bomb")
-    //    {
-    //        Health -= 2;
-    //    }
-    //    else if (other.gameObject.tag == "BombCharged")
-    //    {
-    //        Health -= 4;
-    //    }
-    //}
+    private void OnPlayerKO()
+    {
+        HP.GetComponent<EnemyHP>().Health = HP.GetComponent<EnemyHP>().MaxHealth;
+        spawn.GetComponent<spawn>().Summoned = false;
+        state = 9;
+        transform.position = introPoint.position;
+        speed = 4;
+        lowHealth = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        increase = 0;
+        requiredIncrease = Random.Range(8, 12);
+        timer = 0;
+        timer2 = 0;
+        anim.SetBool("Attacking", false);
+        ExitDoor.SetActive(false);
+        gameObject.SetActive(false);
+    }
 }
