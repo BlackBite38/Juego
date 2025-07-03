@@ -52,12 +52,38 @@ public class EnemyFly : MonoBehaviour
         //            DirectionChange();
         //        }
         //    }
-
-        if (enemy.GetComponent<BlackEnemy>().flying == true)
+        if (enemy.GetComponent<BlackEnemy>() != null)
         {
-            anim.SetBool("Flying", true);
-            rb.gravityScale = 0;
+            if (enemy.GetComponent<BlackEnemy>().flying == true)
+            {
+                anim.SetBool("Flying", true);
+                rb.gravityScale = 0;
 
+                if (Vector2.Distance(enemy.transform.position, points[i].position) < 0.02f)
+                {
+                    waitTimer += Time.deltaTime;
+                    if (waitTimer > idleTime)
+                    {
+                        i++;
+                        if (i == points.Length)
+                        {
+                            i = 0;
+                        }
+                        waitTimer = 0;
+                    }
+                }
+                enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, points[i].position, speed * Time.deltaTime);
+            }
+            else
+            {
+                anim.SetBool("Flying", false);
+                rb.gravityScale = 1;
+            }
+        }
+        if (enemy.GetComponent<BlackEnemy>() == null)
+        {
+            if(rb != null)
+                rb.gravityScale = 0;
             if (Vector2.Distance(enemy.transform.position, points[i].position) < 0.02f)
             {
                 waitTimer += Time.deltaTime;
@@ -72,11 +98,6 @@ public class EnemyFly : MonoBehaviour
                 }
             }
             enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, points[i].position, speed * Time.deltaTime);
-        }
-        else
-        {
-            anim.SetBool("Flying", false);
-            rb.gravityScale = 1;
         }
     }
     //private void DirectionChange()

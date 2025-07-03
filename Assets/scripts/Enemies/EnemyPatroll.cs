@@ -74,14 +74,14 @@ public class EnemyPatroll : MonoBehaviour
         waitTimer = 0;
         if (enemy.GetComponent<BlackEnemy>() != null)
         {
-            if (enemy.GetComponent<BlackEnemy>().flying == false && anim != null)
+            if (enemy.GetComponent<BlackEnemy>().flying == false && anim != null && speed != 0)
             { 
                 anim.SetBool("Walking", true);
             }
         }
         else
         {
-            if (anim != null)
+            if (anim != null && speed != 0)
                 anim.SetBool("Walking", true);
         }
         enemy.localScale=new Vector3(Mathf.Abs(initScale.x) *_direction, enemy.localScale.y, enemy.localScale.z);

@@ -379,7 +379,10 @@ MonoBehaviour:
   ExploPoint: {fileID: 5422763753198880813}
   isBoss: 0
   isBoss1: 0
+  isBoss2: 0
+  isBoss3: 0
   defeatEvent: {fileID: 0}
+  anim: {fileID: 0}
   damageSound: {fileID: 0}
   ItemDrops:
   - ItemPrefab: {fileID: 2351328887149651839, guid: 8457d054977925f498583d477794c8f4, type: 3}
@@ -545,7 +548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9156062841142338601}
   - component: {fileID: 2331361209490873146}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: CannonRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

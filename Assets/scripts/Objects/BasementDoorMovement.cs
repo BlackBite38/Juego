@@ -24,11 +24,13 @@ public class BasementDoorMovement : MonoBehaviour
     {
         if (activeDoor==true)
         {
-            anim.SetBool("OpenDoor", true);
+            if (anim != null)
+                anim.SetBool("OpenDoor", true);
         }
         else
         {
-            anim.SetBool("OpenDoor", false);
+            if (anim != null)
+                anim.SetBool("OpenDoor", false);
         }
     }
     private void OnTriggerStay2D(Collider2D other)
@@ -38,12 +40,14 @@ public class BasementDoorMovement : MonoBehaviour
             if (inArea1==true)
             {
                 player.transform.position = Area2.position;
-                Cam.MoveToNewPlaceY(area2Cam);
+                if (Cam != null) 
+                    Cam.MoveToNewPlaceY(area2Cam);
             }
             if (inArea2 == true)
             {
                 player.transform.position = Area1.position;
-                Cam.MoveToNewPlaceY(area1Cam);
+                if (Cam != null)
+                    Cam.MoveToNewPlaceY(area1Cam);
             }
         }
     }
