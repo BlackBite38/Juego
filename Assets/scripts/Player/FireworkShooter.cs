@@ -29,7 +29,7 @@ public class FireworkShooter : MonoBehaviour
             if (playerControler.GetComponent<PlayerMove>().weaponType == 1 && playerControler.GetComponent<PlayerMove>().canShoot==0)
             {
                 SoundManager.instance.PlaySound(throwFirework);
-                if (playerControler.GetComponent<PlayerMove>().chargeAmount < 1)
+                if (playerControler.GetComponent<PlayerMove>().chargeAmount < 0.75f)
                 {
                     Attack();
                     playerControler.GetComponent<PlayerMove>().chargeAmount = 0;
@@ -45,7 +45,7 @@ public class FireworkShooter : MonoBehaviour
     void Attack()
     {
         anim.SetTrigger("FireThr");
-        playerControler.GetComponent<PlayerMove>().AttackCooldown += 1;
+        playerControler.GetComponent<PlayerMove>().AttackCooldown += 0.75f;
 
         FireworksAmmo[FindFirework()].transform.position = Offset.position;
         FireworksAmmo[FindFirework()].GetComponent<FireworkProjectile>().SetDirection(Mathf.Sign(transform.localScale.x));
@@ -53,7 +53,7 @@ public class FireworkShooter : MonoBehaviour
     void AttackCharged()
     {
         anim.SetTrigger("FireThr");
-        playerControler.GetComponent<PlayerMove>().AttackCooldown += 1;
+        playerControler.GetComponent<PlayerMove>().AttackCooldown += 0.75f;
 
         ChargedFireworksAmmo[FindChargedFirework()].transform.position = Offset.position;
         ChargedFireworksAmmo[FindChargedFirework()].GetComponent<FireworkProjectile>().SetDirection(Mathf.Sign(transform.localScale.x));

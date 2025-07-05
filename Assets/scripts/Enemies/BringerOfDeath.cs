@@ -55,6 +55,7 @@ public class BringerOfDeath : MonoBehaviour
         F_PlaceC = FireSpellAreaA.position.y;
         actionMoment = 3;
         actionMoment2 = 3;
+        AttackCooldown = 3;
         alive = true;
     }
     // Update is called once per frame
@@ -79,7 +80,7 @@ public class BringerOfDeath : MonoBehaviour
             }
             if (actionTimer > actionMoment)
             {
-                state = Random.Range(0, 4);
+                state = Random.Range(1, 3);
                 actionTimer = 0;
             }
             if (actionTimer2 > actionMoment2)
@@ -113,9 +114,13 @@ public class BringerOfDeath : MonoBehaviour
                     _direction = -1;
                     transform.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction, initScale.y, initScale.z);
                 }
-                if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
+                else
                 {
-                    i += Random.Range(0, points.Length);
+                    _direction = 1;
+                }
+                if (Vector2.Distance(transform.position, points[i].position) <= 0.02f)
+                {
+                    i += Random.Range(0, 3);
                     state = Random.Range(0, 3);
                 }
             }
@@ -143,10 +148,6 @@ public class BringerOfDeath : MonoBehaviour
                 anim.SetTrigger("FireSpell");
                 actionTimer2 += Time.deltaTime;
             }
-            if(state >= 4)
-            {
-                state = 0;
-            }
 
             if (PlayerInRange())
             {
@@ -163,6 +164,18 @@ public class BringerOfDeath : MonoBehaviour
             if (bossHealth < ((4 * maxBossHealth) / 10))
             {
                 phase3 = true;
+            }
+            if(phase2 == false && phase2 == false)
+            {
+                AttackCooldown = 3;
+            }
+            else if (phase2==true && phase3==false)
+            {
+                AttackCooldown = 2.5f;
+            }
+            else if(phase2==true && phase3==true)
+            {
+                AttackCooldown = 2;
             }
         }
         if (player.GetComponent<PlayerHp>().CurrentHealth <= 0)
@@ -259,7 +272,7 @@ public class BringerOfDeath : MonoBehaviour
             {
                 SoundManager.instance.PlaySound(damageSound);
             }
-            if (!PlayerInRange())
+            if (!PlayerInRange() && state != 2 && state != 3)
             {
                 anim.SetTrigger("Hurt");
             }

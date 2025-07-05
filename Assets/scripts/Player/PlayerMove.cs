@@ -25,8 +25,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] public int weaponType;   //    weapon[];
     [SerializeField] GameObject BombT, BombP, BombTCharged, BombPCharged; // Firework, FireworkCharged;
     [SerializeField] public Transform BombOffset1, BombOffset2, BombOffset3, FireworkOffset, BombOffsetCharged1, BombOffsetCharged2, BombOffsetCharged3;
-            //[SerializeField] private GameObject[] FireworksAmmo, ChargedFireworksAmmo;
-    // bool chargeUnlocked;
+    //[SerializeField] private GameObject[] FireworksAmmo, ChargedFireworksAmmo;
+    [SerializeField] public bool activeFireworks, chargeUnlocked;
     public float chargeAmount;
     public float direction;
 
@@ -153,7 +153,7 @@ public class PlayerMove : MonoBehaviour
         {
             AttackCooldown = 0;
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && activeFireworks==true)
         {
             weaponType+=1;
         }
@@ -163,7 +163,8 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Z))
         {
-            chargeAmount += Time.deltaTime;
+            if(chargeUnlocked)
+                chargeAmount += Time.deltaTime;
             if(chargeAmount > 1)
             {
                 chargeAmount = 1;

@@ -138,8 +138,12 @@ MonoBehaviour:
   ExploPoint: {fileID: 0}
   isBoss: 0
   isBoss1: 1
+  isBoss2: 0
+  isBoss3: 0
   defeatEvent: {fileID: 0}
+  anim: {fileID: 0}
   damageSound: {fileID: 8300000, guid: 72bc1ca5082a4be439109fe0ad6620db, type: 3}
+  ItemDrops: []
 --- !u!212 &8989332813283706516
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -361,7 +365,9 @@ MonoBehaviour:
   enemy: {fileID: 1419761676663142242}
   Summoned: 0
   bossDead: 0
-  songs: []
+  songs:
+  - {fileID: 8300000, guid: e658c17a67b0f304f9dbbb8d4aecbdb6, type: 3}
+  - {fileID: 8300000, guid: 8dbe25eba07ebc54a829315b0a8d9a53, type: 3}
   audio: {fileID: 0}
 --- !u!1 &2293271935025327591
 GameObject:

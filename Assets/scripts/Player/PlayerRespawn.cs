@@ -26,6 +26,10 @@ public class PlayerRespawn : MonoBehaviour
             Camera.main.GetComponent<SegmentCamera>().MoveToNewPlaceX(currentCheckpoint.parent);
             //Camera.main.GetComponent<SegmentCamera>().MoveToNewPlaceY(currentCheckpoint.parent);
         }
+        else if(Camera.main.GetComponent<Level3Camera>() != null)
+        {
+            Camera.main.GetComponent<Level3Camera>().MoveToNewPlaceY(currentCheckpoint.parent);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
