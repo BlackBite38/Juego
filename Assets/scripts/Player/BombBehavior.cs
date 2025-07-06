@@ -111,5 +111,9 @@ public class BombBehavior : MonoBehaviour
                     other.GetComponent<BringerOfDeath>().TakeDamage(damage);
             }
         }
+        else if (other.gameObject.tag == "Hole")
+        {
+            Destroy(gameObject);
+        }
     }
 }

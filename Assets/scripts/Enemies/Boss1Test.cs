@@ -72,7 +72,7 @@ public class Boss1Test : MonoBehaviour
                 }
                 else
                 {
-                    speed = Random.Range(5, 8);
+                    speed = Random.Range(5, 9);
                 }
                 state = Random.Range(0, 7);
                 if (i >= points.Length)

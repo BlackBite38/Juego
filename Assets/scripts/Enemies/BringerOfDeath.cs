@@ -120,7 +120,7 @@ public class BringerOfDeath : MonoBehaviour
                 }
                 if (Vector2.Distance(transform.position, points[i].position) <= 0.02f)
                 {
-                    i += Random.Range(0, 3);
+                    i = Random.Range(0, 3);
                     state = Random.Range(0, 3);
                 }
             }
