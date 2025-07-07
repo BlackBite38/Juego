@@ -18,16 +18,17 @@ public class WeaponUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentWeaponCharge.fillAmount = playerMove.chargeAmount;
         if (playerMove.weaponType==0)
         {
             currentWeapon.sprite = Bomb.sprite;
             currentWeaponCharge.sprite = BombCharge.sprite;
+            currentWeaponCharge.fillAmount = playerMove.chargeAmount;
         }
         else if(playerMove.weaponType==1)
         {
             currentWeapon.sprite = Firework.sprite;
             currentWeaponCharge.sprite = FireworkCharge.sprite;
+            currentWeaponCharge.fillAmount = playerMove.chargeAmount * (4/3);
         }
     }
 }

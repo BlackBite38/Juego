@@ -25,7 +25,8 @@ public class EnemyFly : MonoBehaviour
     }
     private void OnDisable()
     {
-        anim.SetBool("Flying", false);
+        if (enemy.GetComponent<BlackEnemy>() != null)
+            anim.SetBool("Flying", false);
     }
     // Update is called once per frame
     void Update()

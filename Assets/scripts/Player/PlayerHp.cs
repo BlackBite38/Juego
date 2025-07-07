@@ -51,10 +51,6 @@ public class PlayerHp : MonoBehaviour
             KO_anim.SetActive(false);
             deadAnim = false;
         }
-        if(Input.GetKeyUp(KeyCode.V))
-        {
-            Respawn();
-        }
     }
     public void TakeDamage(float _damage)
     {

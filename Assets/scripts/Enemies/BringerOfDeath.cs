@@ -80,7 +80,7 @@ public class BringerOfDeath : MonoBehaviour
             }
             if (actionTimer > actionMoment)
             {
-                state = Random.Range(1, 3);
+                state = Random.Range(1, 4);
                 actionTimer = 0;
             }
             if (actionTimer2 > actionMoment2)
@@ -121,7 +121,7 @@ public class BringerOfDeath : MonoBehaviour
                 if (Vector2.Distance(transform.position, points[i].position) <= 0.02f)
                 {
                     i = Random.Range(0, 3);
-                    state = Random.Range(0, 3);
+                    state = Random.Range(0, 4);
                 }
             }
             if (state != 1)
@@ -147,6 +147,10 @@ public class BringerOfDeath : MonoBehaviour
             {
                 anim.SetTrigger("FireSpell");
                 actionTimer2 += Time.deltaTime;
+            }
+            if (state > 3)
+            {
+                state = 1;
             }
 
             if (PlayerInRange())
