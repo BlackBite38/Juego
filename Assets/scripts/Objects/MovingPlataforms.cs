@@ -39,4 +39,9 @@ public class MovingPlataforms : MonoBehaviour
     {
         other.transform.SetParent(OG_P);
     }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Player")
+            other.transform.SetParent(OG_P);
+    }
 }

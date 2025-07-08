@@ -75,13 +75,13 @@ public class PlayerMove : MonoBehaviour
         anim.SetBool("Run", HorizontalInput != 0);
         anim.SetBool("OnGround", isGrounded()); //Grounded);
         //agacharse
-        if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded()) //Grounded)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded() || Input.GetKeyDown(KeyCode.S) && isGrounded()) //Grounded)
         {
             anim.SetBool("Crouch", true);
             Crouching = true;
             spid = 0;
         }
-        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        else if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
         {
             anim.SetBool("Crouch", false);
             Crouching = false;
@@ -119,31 +119,6 @@ public class PlayerMove : MonoBehaviour
         {
             wallJumpCooldown += Time.deltaTime;
         }
-        //if (isGrounded())
-        //{
-        //    coyoteCount = coyoteTime;
-        //}
-        //else
-        //    coyoteCount -= Time.deltaTime;
-
-        //        salto nuevo
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Jump();
-        //} //salto ajustable
-        //if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
-        //    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 2);
-        //if (onWall() && !isGrounded())
-        //{
-        //    rb.gravityScale = 0;
-        //    rb.velocity = Vector2.zero;
-        //}
-        //else
-        //{
-        //    rb.gravityScale = 2;
-        //    rb.velocity = new Vector2(HorizontalInput * spid, rb.velocity.y);
-        //}//aqui termina el salto nuevo
-
         //armas
         if (AttackCooldown>0)
         {
@@ -190,9 +165,6 @@ public class PlayerMove : MonoBehaviour
             else if (weaponType == 1)
             {
                 return;
-                //if(chargeUnlocked==true)     ChargedFireworkThrow();
-                //else
-                //FireworkThrow();
             }
         }
         if (onWall() && !isGrounded())
@@ -268,7 +240,6 @@ public class PlayerMove : MonoBehaviour
         //    wallJumpCooldown = 0;
         //}
     }
-
     private void WallJump()
     {
         rb.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
@@ -317,15 +288,28 @@ public class PlayerMove : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            // se activa al chocar con el enemigo
-        }
         //anterior metodo de salto
         //if (collision.gameObject.tag == "Ground")
         //{
         //    Grounded = true;
         //}
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.transform.GetComponent<PlatformEffector2D>())
+        {
+            if (Input.GetKey(KeyCode.S) && (Input.GetKeyDown(KeyCode.Space)) || Input.GetKey(KeyCode.DownArrow) && (Input.GetKeyDown(KeyCode.Space)))
+            {
+                gameObject.transform.GetComponent<Collider2D>().isTrigger = true;
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.transform.GetComponent<PlatformEffector2D>())
+        {
+            gameObject.transform.GetComponent<Collider2D>().isTrigger = false;
+        }
     }
     private bool isGrounded()
     {
@@ -337,34 +321,4 @@ public class PlayerMove : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x,0), 0.1f, wallLayer);
         return raycastHit.collider != null;
     }
-    //public void FireworkThrow()
-    //{
-    //    if (!Crouching)
-    //    {
-    //        if (onWall() && !isGrounded())
-    //        {
-    //            return;
-    //        }
-    //        else
-    //        {
-    //            anim.SetTrigger("FireThr");
-    //            FireworksAmmo[FindFirework()].transform.position = Offset1.position;
-    //            FireworksAmmo[FindFirework()].GetComponent<projectileTest>().SetDirection(Mathf.Sign(transform.localScale.x));
-    //            AttackCooldown += 1;
-    //            
-    //            //Instantiate(Firework, Offset1.position, transform.rotation);
-    //        }
-    //    }
-    //}
-    //private int FindFirework()
-    //{
-    //    for(int i =0; i<FireworksAmmo.Length; i++)
-    //    {
-    //        if (!FireworksAmmo[i].activeInHierarchy)
-    //        {
-    //            return i;
-    //        }
-    //    }
-    //    return 0;
-    //}
 }
