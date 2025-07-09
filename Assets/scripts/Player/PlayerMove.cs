@@ -188,8 +188,8 @@ public class PlayerMove : MonoBehaviour
     {
         if(coyoteCount<=0 && !onWall()) return;
 
-        anim.SetTrigger("Jump");
-        SoundManager.instance.PlaySound(JumpSound);
+        //anim.SetTrigger("Jump");
+        //SoundManager.instance.PlaySound(JumpSound);
 
         if(onWall())
         {
@@ -242,6 +242,8 @@ public class PlayerMove : MonoBehaviour
     }
     private void WallJump()
     {
+        anim.SetTrigger("Jump");
+        SoundManager.instance.PlaySound(JumpSound);
         rb.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
         wallJumpCooldown= 0;
     }

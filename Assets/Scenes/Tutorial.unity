@@ -2488,12 +2488,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337933729}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a609b9f212f53744e9ae9741e0ef4297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 45a942f4c4d6cce4abb9068f9a5e510d, type: 2}
+  musicSlider: {fileID: 337933732}
+  sfxSlider: {fileID: 1152276519}
 --- !u!114 &337933732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2538,17 +2540,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 429526574}
   m_HandleRect: {fileID: 174764440}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 20
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 337933731}
-        m_TargetAssemblyTypeName: VolumeMenu, Assembly-CSharp
-        m_MethodName: SetMusicVolume
-        m_Mode: 0
+      - m_Target: {fileID: 1652751658}
+        m_TargetAssemblyTypeName: VolumeSliders, Assembly-CSharp
+        m_MethodName: SaveMusic
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7629,7 +7631,7 @@ GameObject:
   - component: {fileID: 901366222}
   m_Layer: 0
   m_Name: Music
-  m_TagString: Untagged
+  m_TagString: audioMusica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9169,12 +9171,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152276516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a609b9f212f53744e9ae9741e0ef4297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: d2fc7fd3f80482d4cac8f8b8f223ed15, type: 2}
+  musicSlider: {fileID: 337933732}
+  sfxSlider: {fileID: 1152276519}
 --- !u!114 &1152276519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9219,17 +9223,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 1242600286}
   m_HandleRect: {fileID: 1409929296}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 20
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1152276518}
-        m_TargetAssemblyTypeName: VolumeMenu, Assembly-CSharp
-        m_MethodName: SetSFXVolume
-        m_Mode: 0
+      - m_Target: {fileID: 1652751658}
+        m_TargetAssemblyTypeName: VolumeSliders, Assembly-CSharp
+        m_MethodName: SaveSFX
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13576,6 +13580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652751656}
   - component: {fileID: 1652751657}
+  - component: {fileID: 1652751658}
   - component: {fileID: 1652751655}
   - component: {fileID: 1652751654}
   - component: {fileID: 1652751653}
@@ -13682,6 +13687,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1006687885}
+--- !u!114 &1652751658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652751652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6468c6aadb108fe4c90a2dedff203964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 337933732}
+  sfxSlider: {fileID: 1152276519}
+  music: []
+  sonidos: []
 --- !u!1 &1656555363
 GameObject:
   m_ObjectHideFlags: 0
@@ -13817,7 +13838,7 @@ GameObject:
   - component: {fileID: 1679139788}
   m_Layer: 0
   m_Name: SoundManager
-  m_TagString: Untagged
+  m_TagString: audioSFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16983,6 +17004,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1200692601}
   - {fileID: 1679139790}
+  - {fileID: 1652751656}
   - {fileID: 1796748019}
   - {fileID: 1941212497}
   - {fileID: 1656555364}
@@ -17002,6 +17024,5 @@ SceneRoots:
   - {fileID: 1392053374}
   - {fileID: 1184178039}
   - {fileID: 716909566}
-  - {fileID: 1652751656}
   - {fileID: 872440734}
   - {fileID: 171931697}

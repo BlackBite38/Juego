@@ -737,9 +737,9 @@ GameObject:
   - component: {fileID: 26168408}
   - component: {fileID: 26168407}
   - component: {fileID: 26168406}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_2 (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1337,9 +1337,9 @@ GameObject:
   - component: {fileID: 53290471}
   - component: {fileID: 53290470}
   - component: {fileID: 53290469}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_0
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4756,12 +4756,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187817639}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a609b9f212f53744e9ae9741e0ef4297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: d2fc7fd3f80482d4cac8f8b8f223ed15, type: 2}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
 --- !u!114 &187817642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4806,17 +4808,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 928272250}
   m_HandleRect: {fileID: 1193455867}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 20
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 187817641}
-        m_TargetAssemblyTypeName: VolumeMenu, Assembly-CSharp
-        m_MethodName: SetSFXVolume
-        m_Mode: 0
+      - m_Target: {fileID: 717985195}
+        m_TargetAssemblyTypeName: VolumeSliders, Assembly-CSharp
+        m_MethodName: SaveSFX
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8732,7 +8734,7 @@ GameObject:
   - component: {fileID: 363864198}
   m_Layer: 0
   m_Name: Music
-  m_TagString: Untagged
+  m_TagString: audioMusica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16437,6 +16439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717985194}
   - component: {fileID: 717985193}
+  - component: {fileID: 717985195}
   - component: {fileID: 717985192}
   - component: {fileID: 717985191}
   - component: {fileID: 717985190}
@@ -16543,6 +16546,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &717985195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717985189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6468c6aadb108fe4c90a2dedff203964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 1651647353}
+  sfxSlider: {fileID: 187817642}
+  music: []
+  sonidos: []
 --- !u!114 &730500186 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3334280391347312013, guid: 4c4c723d24606bc45823fc3055f0e261, type: 3}
@@ -22866,9 +22885,9 @@ GameObject:
   - component: {fileID: 768027742}
   - component: {fileID: 768027741}
   - component: {fileID: 768027740}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_2 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23209,9 +23228,9 @@ GameObject:
   - component: {fileID: 792044085}
   - component: {fileID: 792044084}
   - component: {fileID: 792044083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23840,9 +23859,9 @@ GameObject:
   - component: {fileID: 824022638}
   - component: {fileID: 824022637}
   - component: {fileID: 824022636}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_2 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24174,9 +24193,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 833770849}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127613,9 +127632,9 @@ GameObject:
   - component: {fileID: 1417094081}
   - component: {fileID: 1417094080}
   - component: {fileID: 1417094079}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_2 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128979,9 +128998,9 @@ GameObject:
   - component: {fileID: 1448159020}
   - component: {fileID: 1448159019}
   - component: {fileID: 1448159018}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_2 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130129,9 +130148,9 @@ GameObject:
   - component: {fileID: 1553604931}
   - component: {fileID: 1553604930}
   - component: {fileID: 1553604929}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131990,12 +132009,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651647350}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a609b9f212f53744e9ae9741e0ef4297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 45a942f4c4d6cce4abb9068f9a5e510d, type: 2}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
 --- !u!114 &1651647353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132040,17 +132061,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 1921488276}
   m_HandleRect: {fileID: 504063808}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 20
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1651647352}
-        m_TargetAssemblyTypeName: VolumeMenu, Assembly-CSharp
-        m_MethodName: SetMusicVolume
-        m_Mode: 0
+      - m_Target: {fileID: 717985195}
+        m_TargetAssemblyTypeName: VolumeSliders, Assembly-CSharp
+        m_MethodName: SaveMusic
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -132724,7 +132745,7 @@ GameObject:
   - component: {fileID: 1687306076}
   m_Layer: 0
   m_Name: SoundManager
-  m_TagString: Untagged
+  m_TagString: audioSFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138143,9 +138164,9 @@ GameObject:
   - component: {fileID: 2009952629}
   - component: {fileID: 2009952628}
   - component: {fileID: 2009952627}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformsTr_2 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140670,7 +140691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5094188501894713596, guid: c932c1421686f99478189406cb3508a8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5490459179354958523, guid: c932c1421686f99478189406cb3508a8, type: 3}
       propertyPath: m_LocalPosition.x

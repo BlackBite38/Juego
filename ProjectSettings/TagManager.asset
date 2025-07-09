@@ -17,6 +17,8 @@ TagManager:
   - BombCharged
   - FxTemporaire
   - Checkpoint
+  - audioMusica
+  - audioSFX
   layers:
   - Default
   - TransparentFX
